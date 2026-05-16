@@ -1,0 +1,19 @@
+{
+    "name": "GameWideSystems.GameStateManagement",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:fe498320649f492c85bf07156f993553",
+        "GUID:4beb4f92acd2f57448edf31055d5537d",
+        "GameWideSystems.GameSceneManagement"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

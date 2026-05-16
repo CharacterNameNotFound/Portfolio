@@ -1,0 +1,260 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: ItemDescription Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: ItemDescription
+  m_TableCollectionNameGuidString: ff5779e81a883eb46a0a11b5f5d3d035
+  m_Entries:
+  - m_Id: 21030809872044032
+    m_Key: item_rarity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21030809922375680
+    m_Key: item_stats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21030809930764288
+    m_Key: item_effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21030809930764289
+    m_Key: item_tags
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21030809930764290
+    m_Key: bronze_item_rarity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21030809930764291
+    m_Key: silver_item_rarity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21030809930764292
+    m_Key: gold_item_rarity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21030809930764293
+    m_Key: diamond_item_rarity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21030809930764294
+    m_Key: legendary_item_rarity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635374862336
+    m_Key: Small_tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056640
+    m_Key: Medium_tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056641
+    m_Key: Large_tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056642
+    m_Key: Weapon_tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056643
+    m_Key: Shield_tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056644
+    m_Key: Healing_tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056645
+    m_Key: Burn_tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056646
+    m_Key: Poison_tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056647
+    m_Key: Slow_tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056648
+    m_Key: Haste_tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056649
+    m_Key: Regeneration_tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21129538134282240
+    m_Key: Critical_tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056650
+    m_Key: Value_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056651
+    m_Key: Damage_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056652
+    m_Key: Shield_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056653
+    m_Key: Heal_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056654
+    m_Key: Burn_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056655
+    m_Key: Poison_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056656
+    m_Key: CriticalChance_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056657
+    m_Key: CriticalDamage_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056658
+    m_Key: UsageCount_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056659
+    m_Key: MaxCharge_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056660
+    m_Key: ChargeSpeed_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056661
+    m_Key: SlowTargetCount_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056662
+    m_Key: SlowDuration_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056663
+    m_Key: HasteTargetCount_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056664
+    m_Key: HasteDuration_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041635379056665
+    m_Key: Regeneration_stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21074138227740672
+    m_Key: on_charge_trigger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21074138265489408
+    m_Key: deal_x_damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707890360320
+    m_Key: apply_x_burn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707923914752
+    m_Key: apply_haste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707923914753
+    m_Key: apply_x_heal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707923914754
+    m_Key: apply_x_poison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707923914755
+    m_Key: apply_x_regeneration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707923914756
+    m_Key: apply_x_shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707923914757
+    m_Key: apply_slow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707923914758
+    m_Key: target_self
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707923914759
+    m_Key: target_self_items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707923914760
+    m_Key: target_self_items_all
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707923914761
+    m_Key: target_opponent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707923914762
+    m_Key: target_opponent_items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21110707923914763
+    m_Key: target_opponent_items_all
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23067771894173696
+    m_Key: haste_item_status_effect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23067771931922432
+    m_Key: slow_item_status_effect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23077467392774144
+    m_Key: item_status_effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26711380195479552
+    m_Key: on_fight_start_trigger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26742435652767744
+    m_Key: update_stat_value
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26758475619176448
+    m_Key: triggered_item_target_selector
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1363048128737968215
+  references:
+    version: 2
+    RefIds:
+    - rid: 1363048128737968215
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1772452295030

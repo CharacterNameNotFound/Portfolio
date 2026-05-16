@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: StoryGeneral
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: StoryGeneral
+  m_GUID: 3dfce1dda0366c2479b7d58da9bde46e
+  m_SerializeEntries:
+  - m_GUID: 4f76735b7aa272c4bb20635ddf20862c
+    m_Address: Assets/Sprites/Story/Items/Large_item_placeholder.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81ec366f5b66f3147bccbe7b54bc3df2
+    m_Address: Assets/Sprites/Story/Items/Medium_item_placeholder.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 919c02dabf1e5774d89a026758e44811
+    m_Address: Assets/Sprites/Story/Items/Small_item_placeholder.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a4c062d370950784897b17f1e135e0df, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 10ff1c857bfa41f46afdf2fb7be87d12, type: 2}
+    - {fileID: 11400000, guid: 89cbb6c73c698ab4ba3741a0ed721572, type: 2}

@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Items Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Items
+  m_TableCollectionNameGuidString: e3bd70bec18034d4899d400f171a87d0
+  m_Entries:
+  - m_Id: 135443660345344
+    m_Key: knife
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443719065600
+    m_Key: torch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443719065601
+    m_Key: king_mace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443719065602
+    m_Key: ram
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259904
+    m_Key: poisoned_dagger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259905
+    m_Key: dagger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259906
+    m_Key: rapier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259907
+    m_Key: hand_axe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259908
+    m_Key: vampiric_stiletto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259909
+    m_Key: twin_blades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259910
+    m_Key: practice_sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259911
+    m_Key: runic_blade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569801928704
+    m_Key: bandage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705920
+    m_Key: ale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705921
+    m_Key: healing_salve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705922
+    m_Key: boards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705923
+    m_Key: rum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705924
+    m_Key: fire_wine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705925
+    m_Key: bottled_squid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705926
+    m_Key: rope
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705927
+    m_Key: saw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705928
+    m_Key: med_kit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705929
+    m_Key: sail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705930
+    m_Key: spare_planks
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1363048128453541979
+  references:
+    version: 2
+    RefIds:
+    - rid: 1363048128453541979
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1772451728874

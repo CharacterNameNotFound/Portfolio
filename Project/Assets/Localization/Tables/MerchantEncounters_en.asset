@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MerchantEncounters_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 0b827b2fbad980347ae22b1e7229a8f1, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 13512445935161344
+    m_Localized: Small Character Items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298688
+    m_Localized: Small items from current character
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298689
+    m_Localized: Medium Character Items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298690
+    m_Localized: Medium items from current character
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298691
+    m_Localized: Large Character Items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298692
+    m_Localized: Large items from current character
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298693
+    m_Localized: Weapon Character Items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298694
+    m_Localized: Weapon items from current character
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298695
+    m_Localized: Shield Character Items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298696
+    m_Localized: Shield items from current character
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298697
+    m_Localized: Healing Character Items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298698
+    m_Localized: Healing items from current character
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298699
+    m_Localized: Fire Character Items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13512445981298700
+    m_Localized: Fire items from current character
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

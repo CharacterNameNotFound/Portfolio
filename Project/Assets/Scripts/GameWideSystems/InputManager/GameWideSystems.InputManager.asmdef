@@ -1,0 +1,18 @@
+{
+    "name": "GameWideSystems.InputManager",
+    "rootNamespace": "",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:33c8cdf5de4bccd4abe675c1996deefc",
+        "GUID:0b6e2892eebd8f44fa6a346a38cf663d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c905f6aaf277433e9a796dfba9892d64, type: 3}
+  m_Name: SceneAddressableProvider
+  m_EditorClassIdentifier: 
+  <Main>k__BackingField:
+    m_AssetGUID: 80411404b4901204f873469169c2f4a6
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  <SpaceAdventure>k__BackingField:
+    m_AssetGUID: 7e49e6ed95dd0234cb245a3bfe70a85f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0

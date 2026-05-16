@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Items_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: e3bd70bec18034d4899d400f171a87d0, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 135443660345344
+    m_Localized: Knife
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443719065600
+    m_Localized: Torch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443719065601
+    m_Localized: King Mace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443719065602
+    m_Localized: Ram
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259904
+    m_Localized: Poisoned dagger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259905
+    m_Localized: Dagger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259906
+    m_Localized: Rapier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259907
+    m_Localized: Hand axe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259908
+    m_Localized: Vampiric Stiletto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259909
+    m_Localized: Twin blades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259910
+    m_Localized: Practice sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 135443723259911
+    m_Localized: Runic blade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569801928704
+    m_Localized: Bandage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705920
+    m_Localized: Ale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705921
+    m_Localized: Healing salve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705922
+    m_Localized: Boards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705923
+    m_Localized: Rum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705924
+    m_Localized: Fire wine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705925
+    m_Localized: Bottled squid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705926
+    m_Localized: Ropes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705927
+    m_Localized: Saw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705928
+    m_Localized: Med kit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705929
+    m_Localized: Sail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15002569818705930
+    m_Localized: Spare planks
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,10 @@
+Auto transferable?
+Contains a list of possible transfers
+Each transfer contains requirements
+
+Pros
+Automatic state change
+Cons
+Conflicts
+Possibility of infinite loop
+Usage cases?

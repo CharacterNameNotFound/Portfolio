@@ -1,0 +1,20 @@
+{
+    "name": "Game.UI.CustomUIElements",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:dc47925d1a5fa2946bdd37746b2b5d48",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:bd012f985ab6a4f46b380fda374ff983",
+        "GUID:d227bc0e5dae4990a150777da0094b5c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
