@@ -46,7 +46,7 @@ namespace Game.GameInitialization
 
             await _loadingScreenManager.Show(cancellationToken);
             await _audioManager.Initialize(proceduralHolderTransform, cancellationToken);
-            await _localizationManager.Initialize();
+            //await _localizationManager.Initialize();
 
             await _gameStateManager.AppendGameState(_initializationGameMode, cancellationToken: cancellationToken);
         }
