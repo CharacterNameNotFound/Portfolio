@@ -1,7 +1,9 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
+using Game.GameMode.Session.Game.Data.Enteties;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using Utils.UtilityTypes.AssetReferencing;
 
@@ -36,6 +38,12 @@ namespace Game.GameMode.Session.Controller.GameInitialization
             _sessionRegistry.PlayerCameraComponent = playerCamera.GetComponent<PlayerCameraComponent>();
             
             _sessionRegistry.PlayerCameraComponent.SetSize(_playerSpawnerConfigs.PlayerStats.CameraSize);
+        }
+
+        public void CleanUp()
+        {
+            Addressables.ReleaseInstance(_sessionRegistry.PlayerCameraComponent.gameObject);
+            Addressables.ReleaseInstance(_sessionRegistry.PlayerCharacterComponent.gameObject);
         }
         
     }

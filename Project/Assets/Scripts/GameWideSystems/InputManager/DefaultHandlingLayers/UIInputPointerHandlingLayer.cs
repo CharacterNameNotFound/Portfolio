@@ -10,10 +10,11 @@ namespace GameWideSystems.InputManager.DefaultHandlingLayers
         
         public bool TryHandle(IGesture gesture)
         {
-            if (gesture is not Press or Tap)
+            if (gesture is not Press && gesture is not Tap && gesture is not Pressed)
             {
                 return false;
             }
+            
 
             IPointerGesture pointerGesture = (IPointerGesture) gesture;
             

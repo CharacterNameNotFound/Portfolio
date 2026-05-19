@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: a5e832f6ca4222c45b2b979a8d681a1a
   m_SerializeEntries:
+  - m_GUID: 01446f250f692ec4e959ff0aed46cef6
+    m_Address: Assets/Content/GameMode/Session/Prefabs/Enemy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 02eb376b740eb3648a722bb23a2ed313
     m_Address: Assets/Music/PixelRPG_Battle_MusicPack/Music/Battle_06_CrimsonBoss.wav
     m_ReadOnly: 0

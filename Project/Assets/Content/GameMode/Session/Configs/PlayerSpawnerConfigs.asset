@@ -26,4 +26,6 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   <PlayerStats>k__BackingField:
     CameraSize: 14
-    MoveSpeed: 10
+    MoveSpeed: 5
+    MaxHp: 100
+    CurrentHp: 100

@@ -4,12 +4,14 @@ using Game.GameMode.Session.Controller.GameInitialization;
 using Game.GameMode.Session.Game.Systems;
 using Game.GameMode.Session.Inputs;
 using Game.GameMode.Session.UI;
+using Game.Utilities.MusicControlling;
 using Game.Utilities.SceneDataProviding;
 using GameWideSystems.GameSceneManagement;
 using GameWideSystems.GameSceneManager;
 using GameWideSystems.GameStateManagement;
 using GameWideSystems.UIManagement;
 using GameWideSystems.UIManagement.UIManagerRequests;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
 
@@ -27,6 +29,7 @@ namespace Game.GameMode.Session.Controller
         private ScreenJoystickInputLayer _screenJoystickInputLayer;
         private ISessionInitializer _sessionInitializer;
         private IGameLooper _gameLooper;
+        private AudioArchive _audioArchive;
 
         private CancellationTokenSource _cancellationTokenSource;
         
@@ -38,7 +41,8 @@ namespace Game.GameMode.Session.Controller
             SessionScreenBuilder sessionScreenBuilder, 
             ScreenJoystickInputLayer screenJoystickInputLayer, 
             ISessionInitializer sessionInitializer, 
-            IGameLooper gameLooper)
+            IGameLooper gameLooper, 
+            AudioArchive audioArchive)
         {
             _uiManager = uiManager;
             _sceneAddressableDataProvider = sceneAddressableDataProvider;
@@ -48,12 +52,15 @@ namespace Game.GameMode.Session.Controller
             _screenJoystickInputLayer = screenJoystickInputLayer;
             _sessionInitializer = sessionInitializer;
             _gameLooper = gameLooper;
+            _audioArchive = audioArchive;
         }
         
         
         public async UniTask<bool> Initialize(GameStateInitializationParameters parameters, CancellationToken cancellationToken = default)
         {
             _cancellationTokenSource = new CancellationTokenSource();
+
+            Application.targetFrameRate = 60;
             
             await _gameSceneManager.OpenScene(_sceneAddressableDataProvider.SessionScene, LoadSceneMode.Single,
                 new LoadingScreenParams(false, _loadingScreenManager), cancellationToken: cancellationToken);
@@ -63,10 +70,11 @@ namespace Game.GameMode.Session.Controller
 
         public async UniTask Start(GameStateStartParameters parameters, CancellationToken cancellationToken = default)
         {
-            await _uiManager.OpenScreenRequest(_sessionScreenBuilder, null, out _).Play(cancellationToken);
+            _audioArchive.PlayMusic(MusicGroup.Session, cancellationToken).Forget();
+            await _uiManager.OpenScreenRequest(_sessionScreenBuilder, null, out ScreenHolder sessionScreen).Play(cancellationToken);
             await _loadingScreenManager.Hide(true, cancellationToken);
 
-            await _gameLooper.StartLoop(_cancellationTokenSource.Token);
+            await _gameLooper.StartLoop(sessionScreen, _cancellationTokenSource.Token);
             
             _screenJoystickInputLayer.SetActive(true);
         }
@@ -85,6 +93,8 @@ namespace Game.GameMode.Session.Controller
         {
             _cancellationTokenSource.Cancel();
             _cancellationTokenSource.Dispose();
+            
+            _sessionInitializer.CleanUp();
             
             return _uiManager.CloseTopRequest().Play(cancellationToken);
         }

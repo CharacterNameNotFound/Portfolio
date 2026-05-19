@@ -16,25 +16,40 @@ namespace Game.GameMode.Session.UI
         public override ScreenHolderType ScreenHolderType => ScreenHolderType.Game;
 
 
-        [SerializeField] private Button _button;
+        [SerializeField] private Button _toMainMenuButton;
+        [SerializeField] private Button _loseScreenButton;
+        [SerializeField] private Button _pauseButton;
+        [SerializeField] private GameObject _loseScreen;
 
         public override UniTask<UniTask> OnBeforeOpen(IScreenParams screenParams, CancellationToken cancellationToken)
         {
             UniTask<UniTask> result = base.OnBeforeOpen(screenParams, cancellationToken);
             
-            _button.onClick.AddListener(OnPress);
+            _toMainMenuButton.onClick.AddListener(ToMainMenu);
+            _loseScreenButton.onClick.AddListener(ToMainMenu);
+            
+            _pauseButton.onClick.AddListener(Pause);
             
             return result;
         }
 
-        private void OnPress()
+        private void ToMainMenu()
         {
             GameObject first = SceneManager.GetActiveScene().GetRootGameObjects().First();
             
             Destroy(first);
 
             Dependencies.GameStateManager.CloseCurrentGameState(true, cancellationToken: Application.exitCancellationToken).Forget();
-            //Dependencies._sessionInitializer.InitializeSession(Application.exitCancellationToken).Forget();
+        }
+
+        private void Pause()
+        {
+            Time.timeScale = Time.timeScale > 0.5 ? 0 : 1;
+        }
+
+        public void ShowLoseScreen()
+        {
+            _loseScreen.SetActive(true);
         }
     }
 }

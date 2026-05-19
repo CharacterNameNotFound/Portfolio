@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
+using Game.GameMode.Session.Game.Data.Enteties;
 using UnityEngine;
 
 namespace Game.GameMode.Session.WorldGeneration.DecorationGeneration

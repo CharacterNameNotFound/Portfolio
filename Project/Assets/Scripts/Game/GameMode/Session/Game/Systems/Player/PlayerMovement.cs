@@ -1,4 +1,7 @@
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
+using Game.GameMode.Session.Game.Data.Enteties;
 using Game.GameMode.Session.Inputs;
 using UnityEngine;
 
@@ -12,15 +15,20 @@ namespace Game.GameMode.Session.Game.Systems.Player
         {
             _joystickBuffer = joystickBuffer;
         }
-        
 
-        public void Update(float deltaTime, SessionRegistry sessionRegistry)
+
+        public UniTask Initialize(CancellationToken cancellationToken)
+        {
+            return UniTask.CompletedTask;
+        }
+
+        public UniTask Update(float deltaTime, SessionRegistry sessionRegistry, CancellationToken cancellationToken)
         {
             PlayerCharacterComponent playerCharacter = sessionRegistry.PlayerCharacterComponent;
 
             Vector3 movementVector = _joystickBuffer.Joystick * sessionRegistry.PlayerStats.MoveSpeed;
-            Vector3 newPosition = playerCharacter.transform.position + movementVector * deltaTime;
-
+            Vector3 newPosition = playerCharacter.Transform.position + movementVector * deltaTime;
+            
             Bounds gameFieldBounds = sessionRegistry.GameField.Bounds;
             
             // preventing crossing bound
@@ -28,6 +36,8 @@ namespace Game.GameMode.Session.Game.Systems.Player
                 Mathf.Clamp(newPosition.y, gameFieldBounds.min.y, gameFieldBounds.max.y));
             
             playerCharacter.RigidBody.MovePosition(newPosition);
+            
+            return UniTask.CompletedTask;
         }
     }
 }

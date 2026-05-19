@@ -7,7 +7,6 @@ namespace Game.GameMode.Session.Controller.GameInitialization
     public interface ISessionInitializer
     {
         public UniTask InitializeSession(WorldGenerationConfigs worldGenerationConfigs, CancellationToken cancellationToken);
-
-
+        public void CleanUp();
     }
 }

@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f551e57d6946748d68169a880f1304, type: 3}
+  m_Name: SessionScenario
+  m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Game.Data.SessionScenario
+  WaveList:
+  - EnemyWave:
+      Sprite: {fileID: -1915811620432948212, guid: 9baf3a9fc6b03564fbc5743d5fc078ab, type: 3}
+      SpawnCount: 3
+      Radius: 0.35
+      Hp: 1
+      Speed: 1
+      Dps: 1
+      ExpReward: 1
+    SpawnType: 0
+    SpawnFrequency: 1
+    SegmentLength: 30
+  - EnemyWave:
+      Sprite: {fileID: 7147128031865123269, guid: 1818ab4429a569d4e9796516cf314b9b, type: 3}
+      SpawnCount: 3
+      Radius: 0.6
+      Hp: 10
+      Speed: 1.2
+      Dps: 2
+      ExpReward: 2
+    SpawnType: 0
+    SpawnFrequency: 1
+    SegmentLength: 30
+  - EnemyWave:
+      Sprite: {fileID: -7953397730858328457, guid: b88901b6dca366c4cb2e7ea454cddf89, type: 3}
+      SpawnCount: 3
+      Radius: 0.4
+      Hp: 15
+      Speed: 1.4
+      Dps: 3
+      ExpReward: 3
+    SpawnType: 0
+    SpawnFrequency: 1
+    SegmentLength: 30
+  - EnemyWave:
+      Sprite: {fileID: -2125129744969601857, guid: 69a17661b01c94a4ab7dd6fa6e49b4d9, type: 3}
+      SpawnCount: 4
+      Radius: 0.58
+      Hp: 25
+      Speed: 3
+      Dps: 4
+      ExpReward: 4
+    SpawnType: 0
+    SpawnFrequency: 1
+    SegmentLength: 30
+  - EnemyWave:
+      Sprite: {fileID: 5404717111500087310, guid: 4312f2717f1e71a4aac5c1f79696496e, type: 3}
+      SpawnCount: 8
+      Radius: 0.45
+      Hp: 30
+      Speed: 2.5
+      Dps: 5
+      ExpReward: 5
+    SpawnType: 0
+    SpawnFrequency: 2
+    SegmentLength: 20
+  - EnemyWave:
+      Sprite: {fileID: -8785000843096724056, guid: 196b6459a4e053c469533406cb32ca2d, type: 3}
+      SpawnCount: 3
+      Radius: 0.45
+      Hp: 80
+      Speed: 2
+      Dps: 6
+      ExpReward: 6
+    SpawnType: 0
+    SpawnFrequency: 2
+    SegmentLength: 20
+  - EnemyWave:
+      Sprite: {fileID: -7149966666816782635, guid: b7fba414c6195d548be64ef2cc747f84, type: 3}
+      SpawnCount: 6
+      Radius: 0.45
+      Hp: 80
+      Speed: 3.5
+      Dps: 7
+      ExpReward: 7
+    SpawnType: 0
+    SpawnFrequency: 2
+    SegmentLength: 20
+  - EnemyWave:
+      Sprite: {fileID: 4318477516209838823, guid: 07f222d4b25bbdf4586b87c7abe20b59, type: 3}
+      SpawnCount: 8
+      Radius: 0.45
+      Hp: 120
+      Speed: 4
+      Dps: 8
+      ExpReward: 8
+    SpawnType: 0
+    SpawnFrequency: 2
+    SegmentLength: 20
+  - EnemyWave:
+      Sprite: {fileID: 21300000, guid: 1d8851b6682d5134a8554e9824fd9f2e, type: 3}
+      SpawnCount: 10
+      Radius: 0.5
+      Hp: 150
+      Speed: 5
+      Dps: 9
+      ExpReward: 9
+    SpawnType: 0
+    SpawnFrequency: 3
+    SegmentLength: 30
+  - EnemyWave:
+      Sprite: {fileID: 3347763075938157530, guid: 59dc72c377070ce48aa451dcfa0a29a6, type: 3}
+      SpawnCount: 1
+      Radius: 0.55
+      Hp: 200
+      Speed: 7
+      Dps: 10
+      ExpReward: 10
+    SpawnType: 0
+    SpawnFrequency: 1
+    SegmentLength: 15
+  - EnemyWave:
+      Sprite: {fileID: 21300000, guid: ed8466653f2c10a4eb1b2730c44371a0, type: 3}
+      SpawnCount: 5
+      Radius: 0.55
+      Hp: 250
+      Speed: 8
+      Dps: 11
+      ExpReward: 11
+    SpawnType: 0
+    SpawnFrequency: 1
+    SegmentLength: 3600

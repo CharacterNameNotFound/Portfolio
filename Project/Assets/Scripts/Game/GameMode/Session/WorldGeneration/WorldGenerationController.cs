@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
+using Game.GameMode.Session.Game.Data.Enteties;
 using Game.GameMode.Session.View;
 using Game.GameMode.Session.WorldGeneration.DecorationGeneration;
 using Game.GameMode.Session.WorldGeneration.RoadGeneration;

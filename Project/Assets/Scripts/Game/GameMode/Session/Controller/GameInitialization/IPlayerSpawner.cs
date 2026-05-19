@@ -7,5 +7,6 @@ namespace Game.GameMode.Session.Controller.GameInitialization
     {
         public UniTask SpawnPlayer(CancellationToken cancellationToken);
         public UniTask SpawnCamera(CancellationToken cancellationToken);
+        public void CleanUp();
     }
 }

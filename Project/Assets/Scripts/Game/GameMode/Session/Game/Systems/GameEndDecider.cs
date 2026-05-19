@@ -1,10 +1,12 @@
+using Game.GameMode.Session.Game.Data;
+
 namespace Game.GameMode.Session.Game.Systems
 {
     public class GameEndDecider : IGameEndDecider
     {
-        public bool IsSessionFinished()
+        public bool IsSessionFinished(SessionRegistry sessionRegistry)
         {
-            return false;
+            return sessionRegistry.PlayerStats.CurrentHp <= 0;
         }
     }
 }

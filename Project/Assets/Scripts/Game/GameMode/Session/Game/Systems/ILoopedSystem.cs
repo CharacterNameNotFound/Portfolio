@@ -1,9 +1,12 @@
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
 
 namespace Game.GameMode.Session.Game.Systems
 {
     public interface ILoopedSystem
     {
-        public void Update(float deltaTime, SessionRegistry sessionRegistry);
+        public UniTask Initialize(CancellationToken cancellationToken);
+        public UniTask Update(float deltaTime, SessionRegistry sessionRegistry, CancellationToken cancellationToken);
     }
 }
