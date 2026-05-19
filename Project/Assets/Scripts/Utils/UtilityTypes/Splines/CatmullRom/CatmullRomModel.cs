@@ -8,6 +8,12 @@ namespace Utils.UtilityTypes.Splines.CatmullRom
         
         public float Alpha;
 
+        public CatmullRomModel(Vector2[] points, float alpha)
+        {
+            Points = points;
+            Alpha = alpha;
+        }
+
         public void SetUniform(float alpha)
         {
             SetAlpha(0);

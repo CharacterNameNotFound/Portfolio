@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea14b12d28141da9de125301f96bbe9, type: 3}
+  m_Name: WorldSchemaGenerationConfigs
+  m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.WorldGeneration.WorldSchemaGenerationConfigs
+  <Configs>k__BackingField:
+  - <Threshold>k__BackingField: -2
+  - <Threshold>k__BackingField: 0.03

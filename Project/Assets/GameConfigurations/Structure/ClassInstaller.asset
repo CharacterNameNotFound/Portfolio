@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caac29c0c91d4b97a95ca836e57e28fd, type: 3}
   m_Name: ClassInstaller
   m_EditorClassIdentifier: Assembly-CSharp::Structure.UniversalScriptableObjectClassInstaller
-  _dataObject: []
+  _dataObject:
+  - {fileID: 11400000, guid: 4ca87bc451891d242a86287300abe448, type: 2}
+  - {fileID: 11400000, guid: bc9ea099614741d4f89b371b6eb94963, type: 2}
+  - {fileID: 11400000, guid: f04f938229e82854e9c2d61bb968f541, type: 2}
+  - {fileID: 11400000, guid: d41bfabe987e10846adcea6a34e6cd3d, type: 2}
+  - {fileID: 11400000, guid: 41dd4e6aa83d97f409053a2406abdf15, type: 2}

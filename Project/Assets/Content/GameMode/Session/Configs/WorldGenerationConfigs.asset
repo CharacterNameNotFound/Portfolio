@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef633c766b184399a1e6dff3b9a327d2, type: 3}
+  m_Name: WorldGenerationConfigs
+  m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.WorldGeneration.WorldGenerationConfigs
+  <WorldHostAssetReference>k__BackingField:
+    m_AssetGUID: deec342c3e8742340803419381cbdcc0
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  <WorldSchemaGenerationConfigs>k__BackingField: {fileID: 11400000, guid: 336d4b7e811ae4a46963638e6cb9dda6, type: 2}
+  <WorldSchemaApplierConfigs>k__BackingField: {fileID: 11400000, guid: a4d1a1c5bc85be949b796b04d958dd3c, type: 2}
+  <RoadGeneratorConfigs>k__BackingField: {fileID: 11400000, guid: d41bfabe987e10846adcea6a34e6cd3d, type: 2}
+  <DecorationGeneratorConfigs>k__BackingField: {fileID: 11400000, guid: 059e5987e75f0fc40be9ec4a39b51ec4, type: 2}
+  <WorldSize>k__BackingField: {x: 220, y: 140}
+  <ChunkSize>k__BackingField: {x: 50, y: 50}
+  <FrequencyX>k__BackingField: 0.1
+  <FrequencyY>k__BackingField: 0.1

@@ -13,6 +13,7 @@ namespace Structure
             Container.Install<ScreenBuilderInstaller>();
             Container.Install<TooltipInstaller>();
             Container.Install<UtilityInstaller>();
+            Container.Install<SessionInstaller>();
         }
     }
 }

@@ -3,8 +3,10 @@ using System.IO;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.MainHub.Controller;
+using Game.GameMode.Session.Inputs;
 using Game.Session;
 using Game.UI.Tooltips;
+using Game.Utilities.MusicControlling;
 using GameWideSystems.CameraManagement;
 using GameWideSystems.GameStateManagement;
 using UnityEngine;
@@ -18,24 +20,33 @@ namespace Game.GameMode.Initializer
         private MainHubGameMode.Factory _logInGameModeFactory;
         private TextTooltipRegisterer _textTooltipRegisterer;
         private ICameraManager _cameraManager;
-
+        private AudioArchive _audioArchive;
+        private ScreenJoystickInputLayer _screenJoystickInputLayer; 
+        
         public InitializationGameMode(
             GenericPathProvider genericPathProvider, 
             GameStateManager gameStateManager, 
             MainHubGameMode.Factory logInGameModeFactory, 
             TextTooltipRegisterer textTooltipRegisterer, 
-            ICameraManager cameraManager)
+            ICameraManager cameraManager, 
+            AudioArchive audioArchive, 
+            ScreenJoystickInputLayer screenJoystickInputLayer)
         {
             _genericPathProvider = genericPathProvider;
             _gameStateManager = gameStateManager;
             _logInGameModeFactory = logInGameModeFactory;
             _textTooltipRegisterer = textTooltipRegisterer;
             _cameraManager = cameraManager;
+            _audioArchive = audioArchive;
+            _screenJoystickInputLayer = screenJoystickInputLayer;
         }
 
         public async UniTask<bool> Initialize(GameStateInitializationParameters parameters, CancellationToken cancellationToken)
         {
             _cameraManager.Initialize();
+            
+            await _audioArchive.Initialize(cancellationToken);
+            await _screenJoystickInputLayer.Initialize(cancellationToken);
             
             return true;
         }

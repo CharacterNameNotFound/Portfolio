@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 namespace Utils.UtilityTypes.Splines.CatmullRom

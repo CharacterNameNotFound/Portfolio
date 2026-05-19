@@ -1,5 +1,6 @@
 ﻿using Game.GameMode.Initializer;
 using Game.GameMode.MainHub.Controller;
+using Game.GameMode.Session.Controller;
 using Zenject;
 
 namespace Structure.GameInstalling
@@ -10,6 +11,7 @@ namespace Structure.GameInstalling
         {
             Container.Bind<InitializationGameMode>().To<InitializationGameMode>().AsSingle();
             Container.BindFactory<MainHubGameMode, MainHubGameMode.Factory>().FromFactory<MainHubGameModeFactory>();
+            Container.BindFactory<SessionGameMode, SessionGameMode.Factory>().FromFactory<SessionGameModeFactory>();
             
         }
         

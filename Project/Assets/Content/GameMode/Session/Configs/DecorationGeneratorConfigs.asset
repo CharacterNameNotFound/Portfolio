@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0dd470e1e741439f40658c3265da98, type: 3}
+  m_Name: DecorationGeneratorConfigs
+  m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.WorldGeneration.DecorationGeneration.DecorationGeneratorConfigs
+  <Decorations>k__BackingField:
+  - {fileID: 8646520357662143468, guid: b0b844e939000164a863b1a07d274722, type: 3}
+  - {fileID: 8300232538062320281, guid: e5f18a3671693c442a2a0447b660cefc, type: 3}
+  - {fileID: -1873828082911624767, guid: 61eadf1922f9f6e4db3c687f6d4f5ce5, type: 3}
+  - {fileID: -6346178176940488072, guid: be018e71cd5c69941ab40bb87ec806d2, type: 3}
+  - {fileID: 8666842339952851671, guid: e6e236c3aec00764aae2d8c6a46c90ed, type: 3}
+  - {fileID: 3705590170124998695, guid: a41ddd8d33b6713409104134e804cddd, type: 3}
+  - {fileID: -1438662502121444352, guid: 9dd03d2331e714047aa167dd34ab42e1, type: 3}
+  - {fileID: 6029200944531770499, guid: f42e1efbe91e779499acab02534157a2, type: 3}
+  - {fileID: 116737276866501807, guid: 4f1a988fe56b6284e866fa75f7f42d80, type: 3}
+  - {fileID: 1805569884877165867, guid: bed5d26443c503e4ca92e93add884162, type: 3}
+  - {fileID: -6910185060847460805, guid: 0af2ba4638915dd43832c880ac1478ea, type: 3}
+  - {fileID: -6847293679653665172, guid: 255b490672c67d6439f7c08924e32130, type: 3}
+  <DecoratingChunkSize>k__BackingField: {x: 50, y: 50}
+  <DecoratingChunkDecorationCount>k__BackingField: 3
+  <MinimumDistanceBetweenDecos>k__BackingField: 20
+  <SanityCount>k__BackingField: 1000

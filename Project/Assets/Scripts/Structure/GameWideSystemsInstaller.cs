@@ -1,4 +1,5 @@
-﻿using GameWideSystems.AudioManager;
+﻿using Game.Utilities.MusicControlling;
+using GameWideSystems.AudioManager;
 using GameWideSystems.CameraManagement;
 using GameWideSystems.GameSceneManagement;
 using GameWideSystems.GameSceneManager;
@@ -57,6 +58,8 @@ namespace Structure.GameInstalling
         {
             Container.Bind<IScreenHostProvider>().FromComponentInNewPrefab(_uiManagementPrefab).AsSingle().NonLazy();
             Container.Bind<UIManager>().To<UIManager>().AsSingle();
+            
+            Container.Bind<AudioArchive>().To<AudioArchive>().AsSingle();
         }
 
         private void InstallLocalization()

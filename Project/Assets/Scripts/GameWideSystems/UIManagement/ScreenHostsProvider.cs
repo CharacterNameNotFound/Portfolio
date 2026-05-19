@@ -11,6 +11,7 @@ namespace GameWideSystems.UIManagement
         [field: SerializeField] public Transform ScreenPool { get; private set; }
         [field: SerializeField] public Transform CreationHolder { get; private set; }
         [field: SerializeField] public Transform CheatConsole { get; private set; }
+        [field: SerializeField] public Transform LoadingScreen { get; private set; }
 
         public Transform GetHolderFor(ScreenHolderType screenHolderTypeType)
         {
@@ -20,6 +21,7 @@ namespace GameWideSystems.UIManagement
                 ScreenHolderType.System => SystemHost,
                 ScreenHolderType.Tooltips => Tooltips,
                 ScreenHolderType.ScreenPool => ScreenPool,
+                ScreenHolderType.LoadingScreen => LoadingScreen,
                 ScreenHolderType.CheatConsole => CheatConsole,
                 _ => throw new ArgumentOutOfRangeException(nameof(screenHolderTypeType), screenHolderTypeType, null)
             };

@@ -7,5 +7,6 @@
         Tooltips,
         ScreenPool,
         CheatConsole,
+        LoadingScreen,
     }
 }

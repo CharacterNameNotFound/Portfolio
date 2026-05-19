@@ -27,10 +27,11 @@ namespace GameWideSystems.AudioManager
             return _audioSourcePool.ExtendBy(sfxPoolSize, cancellationToken);
         }
 
-        public async UniTask PlaySFX(AudioClip clip, CancellationToken cancellationToken)
+        public async UniTask PlaySFX(AudioClip clip, float volume, CancellationToken cancellationToken)
         {
             AudioPlayer audioPlayer = await _audioSourcePool.GetObject(cancellationToken);
 
+            audioPlayer.AudioSource.volume = volume;
             audioPlayer.AudioSource.gameObject.SetActive(true);
             audioPlayer.AudioSource.PlayOneShot(clip);
             

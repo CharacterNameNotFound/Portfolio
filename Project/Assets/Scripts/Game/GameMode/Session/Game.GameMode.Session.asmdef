@@ -1,0 +1,32 @@
+{
+    "name": "Game.GameMode.Session",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fe498320649f492c85bf07156f993553",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:a8b7ac235aff4fe099c20dca1e4e9d49",
+        "GUID:f2678bbe4443e4b4589f3098be1edb25",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:cefdda83e1ef4f3ea37451fc897980e4",
+        "GUID:bc777b61f4cd4c5999168fae0ee6b485",
+        "GUID:37c2c67a3974b3c47852975579e49f4d",
+        "GUID:593a5b492d29ac6448b1ebf7f035ef33",
+        "GUID:9e24947de15b9834991c9d8411ea37cf",
+        "GUID:84651a3751eca9349aac36a66bba901b",
+        "GUID:6fb46112db50e9444a8bebc860de33be",
+        "GUID:4beb4f92acd2f57448edf31055d5537d",
+        "GUID:5845716bdc4893942a4cf4dd5351060d",
+        "GUID:613783dc1674e844b87788ea74ede0f6",
+        "GUID:6ad155df0b40a12458ef65d293f73dcb",
+        "GUID:4307f53044263cf4b835bd812fc161a4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

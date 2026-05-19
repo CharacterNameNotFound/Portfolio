@@ -1,4 +1,5 @@
-﻿using GameWideSystems.InputManager;
+﻿using Game.GameMode.Session.Inputs;
+using GameWideSystems.InputManager;
 using GameWideSystems.InputManager.DefaultHandlingLayers;
 using GameWideSystems.InputManager.ReadingCores;
 using GameWideSystems.InputManager.ReadingCores.Keyboard;
@@ -42,6 +43,10 @@ namespace Structure.GameInstalling
             
             Container.Bind<IInputHandlerLayer>().To<UIInputPointerHandlingLayer>().FromResolve().AsCached();
             Container.Bind<IInputHandlerLayer>().To<TooltipInputLayer>().FromResolve().AsCached();
+            
+            Container.Bind<ScreenJoystickInputLayer>().To<ScreenJoystickInputLayer>().AsSingle();
+            Container.Bind<IInputHandlerLayer>().To<ScreenJoystickInputLayer>().FromResolve().AsCached();
+            Container.Bind<JoystickBuffer>().To<JoystickBuffer>().FromNew().AsSingle();
         }
         
     }

@@ -40,7 +40,7 @@ namespace GameWideSystems.GameSceneManager.LoadingScreen
 
             _inUse = true;
             
-            Transform systemHost = _screenHostProvider.GetHolderFor(ScreenHolderType.System);
+            Transform systemHost = _screenHostProvider.GetHolderFor(ScreenHolderType.LoadingScreen);
             _loadingScreen = await _basicLoadingScreenDataProvider.BasicLoadingScreenAddressableKey.Instantiate(new InstantiationParameters(systemHost, false), cancellationToken);
             
             Canvas canvas = _loadingScreen.GetComponent<Canvas>();
