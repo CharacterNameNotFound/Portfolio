@@ -28,4 +28,9 @@ MonoBehaviour:
     CameraSize: 14
     MoveSpeed: 5
     MaxHp: 100
+    CollectionRadius: 1.5
+    RequiredExpPerLevel: 50
     CurrentHp: 100
+    Level: 1
+    CurrentExp: 0
+  <HarmAura>k__BackingField: {fileID: 11400000, guid: 7057c36fc25b4744b96e374596670f5b, type: 2}

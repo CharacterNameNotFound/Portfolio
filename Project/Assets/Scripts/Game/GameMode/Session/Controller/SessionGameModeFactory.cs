@@ -1,5 +1,6 @@
 using Game.GameMode.Session.Controller.GameInitialization;
 using Game.GameMode.Session.Game.Systems;
+using Game.GameMode.Session.Game.Utilities;
 using Game.GameMode.Session.Inputs;
 using Game.GameMode.Session.UI;
 using Game.Utilities.MusicControlling;
@@ -22,7 +23,8 @@ namespace Game.GameMode.Session.Controller
         private ISessionInitializer _sessionInitializer;
         private IGameLooper _gameLooper;
         private AudioArchive _audioArchive;
-        
+        private SessionScreenHolder _sessionScreenHolder;
+
 
         public SessionGameModeFactory(
             SessionScreenBuilder sessionScreenBuilder, 
@@ -33,7 +35,8 @@ namespace Game.GameMode.Session.Controller
             ScreenJoystickInputLayer screenJoystickInputLayer, 
             ISessionInitializer sessionInitializer, 
             IGameLooper gameLooper, 
-            AudioArchive audioArchive)
+            AudioArchive audioArchive, 
+            SessionScreenHolder sessionScreenHolder)
         {
             _sessionScreenBuilder = sessionScreenBuilder;
             _uiManager = uiManager;
@@ -44,6 +47,7 @@ namespace Game.GameMode.Session.Controller
             _sessionInitializer = sessionInitializer;
             _gameLooper = gameLooper;
             _audioArchive = audioArchive;
+            _sessionScreenHolder = sessionScreenHolder;
         }
 
         public SessionGameMode Create()
@@ -57,7 +61,8 @@ namespace Game.GameMode.Session.Controller
                 _screenJoystickInputLayer,
                 _sessionInitializer,
                 _gameLooper,
-                _audioArchive);
+                _audioArchive,
+                _sessionScreenHolder);
             
         }
     }

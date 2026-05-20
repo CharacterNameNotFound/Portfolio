@@ -1,13 +1,13 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
-using Game.GameMode.Session.Game.Data.Enteties;
+using Game.GameMode.Session.Game.Data.Entities;
 
 namespace Game.GameMode.Session.Game.Systems.Enemies
 {
     public class EnemyDamageDealer : ILoopedSystem
     {
-        public UniTask Initialize(CancellationToken cancellationToken)
+        public UniTask Initialize(SessionRegistry sessionRegistry, CancellationToken cancellationToken)
         {
             return UniTask.CompletedTask;
         }

@@ -1,7 +1,7 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
-using Game.GameMode.Session.Game.Data.Enteties;
+using Game.GameMode.Session.Game.Data.Entities;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceProviders;
@@ -29,7 +29,9 @@ namespace Game.GameMode.Session.Controller.GameInitialization
             playerObject.transform.position = _sessionRegistry.GameField.Bounds.center;
 
             _sessionRegistry.PlayerStats = new PlayerStats(_playerSpawnerConfigs.PlayerStats);
-
+            
+            await _playerSpawnerConfigs.HarmAura.Initialize(cancellationToken);
+            await _playerSpawnerConfigs.HarmAura.OnObtained(_sessionRegistry, cancellationToken);
         }
 
         public async UniTask SpawnCamera(CancellationToken cancellationToken)
@@ -44,6 +46,8 @@ namespace Game.GameMode.Session.Controller.GameInitialization
         {
             Addressables.ReleaseInstance(_sessionRegistry.PlayerCameraComponent.gameObject);
             Addressables.ReleaseInstance(_sessionRegistry.PlayerCharacterComponent.gameObject);
+            
+            _sessionRegistry.ObtainedItems.Clear();
         }
         
     }

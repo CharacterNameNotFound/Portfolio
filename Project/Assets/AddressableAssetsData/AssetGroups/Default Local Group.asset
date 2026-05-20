@@ -105,6 +105,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c8747e50f0580b40bc189724545fd7f
+    m_Address: Assets/Content/GameMode/Session/Prefabs/ExpGem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8d9cf598a56525649bbed526612c2b87
     m_Address: Assets/Music/PixelRPG_Village_MusicPack/Music/RPG_Village_03.wav
     m_ReadOnly: 0
@@ -142,6 +147,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d86e8d03a132e2b44b11740018916cf8
     m_Address: Assets/Content/GameMode/Session/UI/MainHub.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d9f238deb5c2752469759009eab8f16c
+    m_Address: Assets/Content/GameMode/Session/Weapons/HarmArea/HarmAura.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

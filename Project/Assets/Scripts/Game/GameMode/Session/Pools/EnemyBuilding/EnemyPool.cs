@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Game.GameMode.Session.Game.Data.Enteties;
+using Game.GameMode.Session.Game.Data.Entities;
 using Utils.UtilityTypes.ObjectPooling;
 
 namespace Game.GameMode.Session.Pools.EnemyBuilding

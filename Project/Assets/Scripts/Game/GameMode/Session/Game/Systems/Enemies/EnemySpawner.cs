@@ -3,7 +3,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
 using Game.GameMode.Session.Game.Data.Enemies;
-using Game.GameMode.Session.Game.Data.Enteties;
+using Game.GameMode.Session.Game.Data.Entities;
 using Game.GameMode.Session.Pools.EnemyBuilding;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -23,7 +23,7 @@ namespace Game.GameMode.Session.Game.Systems.Enemies
             _enemyPool = enemyPool;
         }
 
-        public UniTask Initialize(CancellationToken cancellationToken)
+        public UniTask Initialize(SessionRegistry sessionRegistry, CancellationToken cancellationToken)
         {
             _sectionIndex = 0;
             _sectionTime = 0;
@@ -124,6 +124,7 @@ namespace Game.GameMode.Session.Game.Systems.Enemies
             enemyComponent.Hp = wave.Hp;
             enemyComponent.Speed = wave.Speed;
             enemyComponent.Dps = wave.Dps;
+            enemyComponent.Exp = wave.ExpReward;
 
             enemyComponent.InPlayerRadius = false;
         }

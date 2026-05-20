@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Game.GameMode.Session.Game.Data;
-using Game.GameMode.Session.Game.Data.Enteties;
+using Game.GameMode.Session.Game.Data.Entities;
 using UnityEngine;
 
 namespace Game.GameMode.Session.WorldGeneration.DecorationGeneration

@@ -12,6 +12,9 @@ namespace Game.GameMode.Session.UI
     // Can use prebuilt state machine, but not worth it
     public class SessionScreenController : UIScreen<IScreenParams, SessionScreenDependencies>
     {
+        private static readonly int ValueID = Shader.PropertyToID("_Hp");
+        
+        
         public override ScreenType ScreenType => ScreenType.Screen;
         public override ScreenHolderType ScreenHolderType => ScreenHolderType.Game;
 
@@ -20,6 +23,8 @@ namespace Game.GameMode.Session.UI
         [SerializeField] private Button _loseScreenButton;
         [SerializeField] private Button _pauseButton;
         [SerializeField] private GameObject _loseScreen;
+        
+        [SerializeField] private Image _expBar;
 
         public override UniTask<UniTask> OnBeforeOpen(IScreenParams screenParams, CancellationToken cancellationToken)
         {
@@ -51,5 +56,11 @@ namespace Game.GameMode.Session.UI
         {
             _loseScreen.SetActive(true);
         }
+
+        public void SetExp(float expPercentile)
+        {
+            _expBar.material.SetFloat(ValueID, expPercentile);
+        }
+        
     }
 }

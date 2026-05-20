@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-using Game.GameMode.Session.Game.Data.Enteties;
+using Game.GameMode.Session.Game.Data.Entities;
+using Game.GameMode.Session.Game.Weapons;
 
 namespace Game.GameMode.Session.Game.Data
 {
@@ -13,10 +14,12 @@ namespace Game.GameMode.Session.Game.Data
         public PlayerCameraComponent PlayerCameraComponent;
         public PlayerStats PlayerStats = new();
         public GameField GameField;
+
+        public List<IItem> ObtainedItems = new();
         
         // environment
         public List<DecorationComponent> Decorations = new();
         public List<EnemyComponent> Enemies = new();
-        public List<ExpGem> ExpGems = new();
+        public List<ExpGemComponent> ExpGems = new();
     }
 }

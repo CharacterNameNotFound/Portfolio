@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Game.GameMode.Session.Game.Data.Enteties
+namespace Game.GameMode.Session.Game.Data.Entities
 {
     public class DecorationComponent : MonoBehaviour
     {

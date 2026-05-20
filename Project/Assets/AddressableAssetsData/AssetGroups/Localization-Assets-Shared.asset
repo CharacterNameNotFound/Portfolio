@@ -14,52 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Localization-Assets-Shared
   m_GUID: e81f918cc1d26e64fbc136b2b59b3ff6
-  m_SerializeEntries:
-  - m_GUID: 0b827b2fbad980347ae22b1e7229a8f1
-    m_Address: Assets/Localization/Tables/MerchantEncounters Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0f831a8866984d448953420597ae9c1f
-    m_Address: Assets/Main Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3c9f37e9e5e8dd247b056c6ab2dc3b3e
-    m_Address: Assets/Localization/Tables/Battle Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 48c9e2b0e41b1694384ba6d78ff05571
-    m_Address: Assets/Localization/Tables/GiftEncounters Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 77b437cbc401d924c8592bcca8be5d9e
-    m_Address: Assets/Localization/Tables/ErrorMessages Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c27e194b188aa4b4ab9c3890abfdec55
-    m_Address: Assets/Localization/Tables/StoryUI Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d73675a6ca67d8245b6b435c78652fe9
-    m_Address: Assets/Localization/Tables/BattleEncounters Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e3bd70bec18034d4899d400f171a87d0
-    m_Address: Assets/Localization/Tables/Items Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ff5779e81a883eb46a0a11b5f5d3d035
-    m_Address: Assets/Localization/Tables/ItemDescription Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: a4c062d370950784897b17f1e135e0df, type: 2}
   m_SchemaSet:

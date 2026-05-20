@@ -9,7 +9,7 @@ namespace Game.GameMode.Session.Game.Systems.Player
     {
         private static readonly int HpShaderRef = Shader.PropertyToID("_Hp");
 
-        public UniTask Initialize(CancellationToken cancellationToken)
+        public UniTask Initialize(SessionRegistry sessionRegistry, CancellationToken cancellationToken)
         {
             return UniTask.CompletedTask;
         }

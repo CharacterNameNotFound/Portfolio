@@ -1,7 +1,7 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
-using Game.GameMode.Session.Game.Data.Enteties;
+using Game.GameMode.Session.Game.Data.Entities;
 using Game.GameMode.Session.Inputs;
 using UnityEngine;
 
@@ -17,7 +17,7 @@ namespace Game.GameMode.Session.Game.Systems.Player
         }
 
 
-        public UniTask Initialize(CancellationToken cancellationToken)
+        public UniTask Initialize(SessionRegistry sessionRegistry, CancellationToken cancellationToken)
         {
             return UniTask.CompletedTask;
         }

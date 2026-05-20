@@ -1,14 +1,14 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
-using Game.GameMode.Session.Game.Data.Enteties;
+using Game.GameMode.Session.Game.Data.Entities;
 using UnityEngine;
 
 namespace Game.GameMode.Session.Game.Systems.Enemies
 {
     public class EnemyMover : ILoopedSystem
     {
-        public UniTask Initialize(CancellationToken cancellationToken)
+        public UniTask Initialize(SessionRegistry sessionRegistry, CancellationToken cancellationToken)
         {
             return UniTask.CompletedTask;
         }
@@ -32,8 +32,9 @@ namespace Game.GameMode.Session.Game.Systems.Enemies
 
                 float squareRadiusSum = enemy.Radius + sessionRegistry.PlayerCharacterComponent.Radius;
                 squareRadiusSum *= squareRadiusSum;
-                
-                enemy.InPlayerRadius = enemyToPlayerRadius.sqrMagnitude < squareRadiusSum;
+
+                enemy.SquareDistanceToPlayer = enemyToPlayerRadius.sqrMagnitude;
+                enemy.InPlayerRadius = enemy.SquareDistanceToPlayer < squareRadiusSum;
             }
             
             return UniTask.CompletedTask;

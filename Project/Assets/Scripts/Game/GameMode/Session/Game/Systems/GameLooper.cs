@@ -25,7 +25,7 @@ namespace Game.GameMode.Session.Game.Systems
         {
             foreach (ILoopedSystem system in _loopedSystems)
             {
-                await system.Initialize(cancellationToken);
+                await system.Initialize(_sessionRegistry, cancellationToken);
             }
 
             Loop(sessionScreen, cancellationToken).Forget();

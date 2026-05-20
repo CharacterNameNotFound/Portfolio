@@ -7,7 +7,7 @@ namespace Game.GameMode.Session.Game.Systems.Player
 {
     public class PlayerCameraMovement : ILoopedSystem
     {
-        public UniTask Initialize(CancellationToken cancellationToken)
+        public UniTask Initialize(SessionRegistry sessionRegistry, CancellationToken cancellationToken)
         {
             return UniTask.CompletedTask;
         }

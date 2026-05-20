@@ -6,7 +6,7 @@ namespace Game.GameMode.Session.Game.Systems
 {
     public interface ILoopedSystem
     {
-        public UniTask Initialize(CancellationToken cancellationToken);
+        public UniTask Initialize(SessionRegistry sessionRegistry, CancellationToken cancellationToken);
         public UniTask Update(float deltaTime, SessionRegistry sessionRegistry, CancellationToken cancellationToken);
     }
 }

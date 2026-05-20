@@ -1,6 +1,7 @@
 using System;
+using UnityEngine;
 
-namespace Game.GameMode.Session.Game.Data.Enteties
+namespace Game.GameMode.Session.Game.Data.Entities
 {
     [Serializable]
     public class PlayerStats
@@ -8,10 +9,14 @@ namespace Game.GameMode.Session.Game.Data.Enteties
         public float CameraSize;
         public float MoveSpeed;
         public float MaxHp;
+        public float CollectionRadius;
+        public float RequiredExpPerLevel;
         
         
         
-        public float CurrentHp;
+        [HideInInspector] public float CurrentHp;
+        [HideInInspector] public int Level;
+        [HideInInspector] public float CurrentExp;
 
         public PlayerStats()
         {
@@ -24,7 +29,9 @@ namespace Game.GameMode.Session.Game.Data.Enteties
             CameraSize = playerStats.CameraSize;
             MaxHp = playerStats.MaxHp;
             CurrentHp = playerStats.CurrentHp;
+            CollectionRadius = playerStats.CollectionRadius;
+            RequiredExpPerLevel = playerStats.RequiredExpPerLevel;
         }
-        
+
     }
 }

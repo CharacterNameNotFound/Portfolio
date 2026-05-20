@@ -2,6 +2,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Controller.GameInitialization;
 using Game.GameMode.Session.Game.Systems;
+using Game.GameMode.Session.Game.Utilities;
 using Game.GameMode.Session.Inputs;
 using Game.GameMode.Session.UI;
 using Game.Utilities.MusicControlling;
@@ -30,6 +31,7 @@ namespace Game.GameMode.Session.Controller
         private ISessionInitializer _sessionInitializer;
         private IGameLooper _gameLooper;
         private AudioArchive _audioArchive;
+        private SessionScreenHolder _sessionScreenHolder;
 
         private CancellationTokenSource _cancellationTokenSource;
         
@@ -42,7 +44,8 @@ namespace Game.GameMode.Session.Controller
             ScreenJoystickInputLayer screenJoystickInputLayer, 
             ISessionInitializer sessionInitializer, 
             IGameLooper gameLooper, 
-            AudioArchive audioArchive)
+            AudioArchive audioArchive, 
+            SessionScreenHolder sessionScreenHolder)
         {
             _uiManager = uiManager;
             _sceneAddressableDataProvider = sceneAddressableDataProvider;
@@ -53,6 +56,7 @@ namespace Game.GameMode.Session.Controller
             _sessionInitializer = sessionInitializer;
             _gameLooper = gameLooper;
             _audioArchive = audioArchive;
+            _sessionScreenHolder = sessionScreenHolder;
         }
         
         
@@ -72,6 +76,7 @@ namespace Game.GameMode.Session.Controller
         {
             _audioArchive.PlayMusic(MusicGroup.Session, cancellationToken).Forget();
             await _uiManager.OpenScreenRequest(_sessionScreenBuilder, null, out ScreenHolder sessionScreen).Play(cancellationToken);
+            _sessionScreenHolder.SessionScreenController = (SessionScreenController) sessionScreen.ScreenBase;
             await _loadingScreenManager.Hide(true, cancellationToken);
 
             await _gameLooper.StartLoop(sessionScreen, _cancellationTokenSource.Token);
