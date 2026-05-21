@@ -8,21 +8,20 @@ using Game.GameMode.Session.Game.Utilities;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using Utils.UtilityTypes.ObjectPooling;
-using Random = UnityEngine.Random;
 
-namespace Game.GameMode.Session.Game.Items
+namespace Game.GameMode.Session.Game.Items.Weapons
 {
-    // it is copy paste of red ball by a lot. But this demo not about code design, so I let it be to save time
-    public class SwordWeapon : CooldownItem
+    public class RedBallWeapon : CooldownItem
     {
         [SerializeField] private AssetReference _assetReference;
         [SerializeField] private int _pooledCount;
+        [SerializeField] private AudioClip _sfx;
         
         [Header("Weapon stas")]
-        [SerializeField] private float _damage;
-        [SerializeField] private int _projectileCount;
+        [SerializeField] private float[] _damage;
+        [SerializeField] private int[] _projectileCount;
         
-        [SerializeField] private Vector2 _projectileExtends;
+        [SerializeField] private float _projectileRadius;
         [SerializeField] private float _projectileSpeed;
         [SerializeField] private float _projectileLifeTime;
         [SerializeField] private float _projectileShootingDelay;
@@ -42,7 +41,7 @@ namespace Game.GameMode.Session.Game.Items
         {
             await base.Initialize(cancellationToken);
             
-            _poolHost = new GameObject("SwordPool").transform;
+            _poolHost = new GameObject("RedBallPool").transform;
             
             List<Projectile> projectiles = new List<Projectile>();
             _projectilePool = new GameObjectPool<Projectile>(
@@ -50,7 +49,7 @@ namespace Game.GameMode.Session.Game.Items
                 new AddressablePoolEntityProvider<Projectile>(_assetReference), 
                 new AssignablePooledObjectHostProvider(_poolHost));
 
-            _activeProjectiles = new List<Projectile>(_pooledCount);
+            _activeProjectiles = new List<Projectile>(_pooledCount / 2);
 
             await _projectilePool.ExtendBy(_pooledCount, cancellationToken);
             Projectile projectile = await _projectilePool.GetObject(cancellationToken);
@@ -61,7 +60,7 @@ namespace Game.GameMode.Session.Game.Items
             CancellationToken cancellationToken)
         {
             await base.UpdateInternal(deltaTime, itemIndex, sessionRegistry, cancellationToken);
-            UpdateProjectiles(itemIndex, deltaTime, sessionRegistry);
+            UpdateProjectiles(deltaTime, sessionRegistry);
             
             if (_currentCooldown > 0)
             {
@@ -76,16 +75,16 @@ namespace Game.GameMode.Session.Game.Items
 
             await CreateProjectile(sessionRegistry, cancellationToken);
 
-            if (_projectilesShot >= _projectileCount + sessionRegistry.PlayerStats.ProjectileCount)
+            if (_projectilesShot >= _projectileCount[CurrentLevel - 1] + sessionRegistry.PlayerStats.ProjectileCount)
             {
                 _projectilesShot = 0;
-                RestartCooldown();
+                RestartCooldown(sessionRegistry);
             }
         }
 
-        public override async UniTask CleanUp(CancellationToken cancellationToken)
+        public override void CleanUp()
         {
-            await base.CleanUp(cancellationToken);
+            base.CleanUp();
 
             foreach (Projectile projectile in _activeProjectiles)
             {
@@ -109,54 +108,27 @@ namespace Game.GameMode.Session.Game.Items
             projectile.Transform.localScale = new Vector3(scale, scale, scale);
             projectile.Transform.position = sessionRegistry.PlayerCharacterComponent.Transform.position;
             
-            if (sessionRegistry.Enemies.Count > 0)
-            {
-                float distance = float.MaxValue;
-                EnemyComponent enemyComponent = sessionRegistry.Enemies[0];
-
-                for (int i = 0; i < sessionRegistry.Enemies.Count; i++)
-                {
-                    if (distance < sessionRegistry.Enemies[i].SquareDistanceToPlayer)
-                    {
-                        continue;
-                    }
-
-                    distance = sessionRegistry.Enemies[i].SquareDistanceToPlayer;
-                    enemyComponent = sessionRegistry.Enemies[i];
-                }
-
-                projectile.Direction = enemyComponent.Transform.position -
-                                       sessionRegistry.PlayerCharacterComponent.Transform.position;
-            }
-            else
-            {
-                projectile.Direction = Random.onUnitCircle;
-            }
-
-            projectile.Direction.Normalize();
+            projectile.Direction = Random.onUnitCircle;
             projectile.ProjectileTime = _projectileLifeTime;
-            projectile.Transform.right = projectile.Direction;
-            
-            projectile.CreationFrame = Time.frameCount;
 
+            sessionRegistry.AudioManager.PlaySFX(_sfx, cancellationToken).Forget();
+            
             _shootingDelayLeft = _projectileShootingDelay;
             _projectilesShot++;
         }
 
-        private void UpdateProjectiles(int itemIndex, float deltaTime, SessionRegistry sessionRegistry)
+        private void UpdateProjectiles(float deltaTime, SessionRegistry sessionRegistry)
         {
-            Vector2 projectileRadius = _projectileExtends * sessionRegistry.PlayerStats.RadiusModifier;
-            float damage = _damage * sessionRegistry.PlayerStats.DamageModifier;
+            float projectileRadius = _projectileRadius * sessionRegistry.PlayerStats.RadiusModifier;
+            float damage = _damage[CurrentLevel - 1] * sessionRegistry.PlayerStats.DamageModifier;
             
             for (int i = 0; i < _activeProjectiles.Count; i++)
             {
                 _activeProjectiles[i].Transform.position += (Vector3) _activeProjectiles[i].Direction * (deltaTime * _projectileSpeed);
 
                 _activeProjectiles[i].ProjectileTime -= deltaTime;
-                
-                ProcessCollision(_activeProjectiles[i], sessionRegistry, projectileRadius, damage, itemIndex);
-                
-                if (_activeProjectiles[i].ProjectileTime > 0)
+                if (!ProcessCollision(_activeProjectiles[i], sessionRegistry, projectileRadius, damage) && 
+                    _activeProjectiles[i].ProjectileTime > 0)
                 {
                     continue;
                 }
@@ -169,30 +141,26 @@ namespace Game.GameMode.Session.Game.Items
             
         }
 
-        private bool ProcessCollision(Projectile projectile, SessionRegistry sessionRegistry, Vector2 projectileExtends, float damage, int itemIndex)
+        private bool ProcessCollision(Projectile projectile, SessionRegistry sessionRegistry, float projectileRadius, float damage)
         {
             Vector3 projectilePosition = projectile.Transform.position;
-            float rotationRad = projectile.Transform.rotation.z * Mathf.Deg2Rad;
             bool result = false;
             
             foreach (EnemyComponent enemy in sessionRegistry.Enemies)
             {
-                if (enemy.InteractedFrame[itemIndex] >= projectile.CreationFrame)
-                {
-                    continue;
-                }
-                
-                if (!CollisionChecks.IsCircleRotatedBoxCollided(enemy.Transform.position, enemy.Radius, projectilePosition, projectileExtends, rotationRad))
+                if (!CollisionChecks.IsCirclesCollided(enemy.Transform.position, projectilePosition, enemy.Radius, projectileRadius))
                 {
                     continue;
                 }
 
-                enemy.InteractedFrame[itemIndex] = projectile.CreationFrame;
                 enemy.Hp -= damage;
                 result = true;
             }
 
             return result;
         }
+        
+        
     }
+    
 }

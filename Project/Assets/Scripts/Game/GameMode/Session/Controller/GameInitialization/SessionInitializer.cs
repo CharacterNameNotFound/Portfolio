@@ -10,17 +10,20 @@ namespace Game.GameMode.Session.Controller.GameInitialization
         private IPlayerSpawner _playerSpawner;
         private IEnemyInitializer _enemyInitializer;
         private IScenarioDataInitializer _dataInitializer;
+        private IItemInitializer _sessionInitializer;
 
         public SessionInitializer(
             IWorldGenerationController worldGenerationController, 
             IPlayerSpawner playerSpawner, 
             IEnemyInitializer enemyInitializer, 
-            IScenarioDataInitializer dataInitializer)
+            IScenarioDataInitializer dataInitializer, 
+            IItemInitializer sessionInitializer)
         {
             _worldGenerationController = worldGenerationController;
             _playerSpawner = playerSpawner;
             _enemyInitializer = enemyInitializer;
             _dataInitializer = dataInitializer;
+            _sessionInitializer = sessionInitializer;
         }
 
 
@@ -31,12 +34,14 @@ namespace Game.GameMode.Session.Controller.GameInitialization
             await _playerSpawner.SpawnCamera(cancellationToken);
             await _enemyInitializer.Initialize(cancellationToken);
             await _dataInitializer.InitializeScenarioData(cancellationToken);
+            await _sessionInitializer.Initialize(cancellationToken);
         }
 
         public void CleanUp()
         {
             _enemyInitializer.CleanUp();
             _playerSpawner.CleanUp();
+            _sessionInitializer.CleanUp();
         }
         
         

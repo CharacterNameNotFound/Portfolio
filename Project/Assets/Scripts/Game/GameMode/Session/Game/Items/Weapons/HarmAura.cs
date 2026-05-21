@@ -8,14 +8,14 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using Utils.UtilityTypes.AssetReferencing;
 
-namespace Game.GameMode.Session.Game.Items
+namespace Game.GameMode.Session.Game.Items.Weapons
 {
     public class HarmAura : CooldownItem
     {
         [SerializeField] private AssetReferenceGameObject _auraPrefab;
         
-        public float Damage;
-        public float Radius;
+        public float[] Damage;
+        public float[] Radius;
 
         private GameObject _auraInstance;
         private float _baseScale;
@@ -43,7 +43,9 @@ namespace Game.GameMode.Session.Game.Items
         {
             await base.OnStatsUpdated(sessionRegistry, cancellationToken);
 
-            float scale = _baseScale * sessionRegistry.PlayerStats.RadiusModifier;
+            float baseScaleMod = Radius[CurrentLevel] / Radius[0];
+            
+            float scale = _baseScale * baseScaleMod * sessionRegistry.PlayerStats.RadiusModifier;
             _auraInstance.transform.localScale = new Vector3(scale, scale, scale);
         }
 
@@ -59,8 +61,8 @@ namespace Game.GameMode.Session.Game.Items
             
             Vector3 characterPosition = sessionRegistry.PlayerCharacterComponent.Transform.position;
 
-            float damage = Damage * sessionRegistry.PlayerStats.DamageModifier;
-            float radius = Radius * sessionRegistry.PlayerStats.RadiusModifier;
+            float damage = Damage[CurrentLevel - 1] * sessionRegistry.PlayerStats.DamageModifier;
+            float radius = Radius[CurrentLevel - 1] * sessionRegistry.PlayerStats.RadiusModifier;
             
             foreach (EnemyComponent enemy in sessionRegistry.Enemies)
             {
@@ -72,17 +74,16 @@ namespace Game.GameMode.Session.Game.Items
                 enemy.Hp -= damage;
             }
 
-            RestartCooldown();
+            RestartCooldown(sessionRegistry);
         }
 
-        public override async UniTask CleanUp(CancellationToken cancellationToken)
+        public override void CleanUp()
         {
-            await base.CleanUp(cancellationToken);
+            base.CleanUp();
             
             _auraInstance.transform.SetParent(null);
             Addressables.ReleaseInstance(_auraInstance);
-            
-
         }
+        
     }
 }

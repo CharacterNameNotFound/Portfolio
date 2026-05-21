@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
+using Game.GameMode.Session.Game.Items;
 using Game.GameMode.Session.UI;
 using GameWideSystems.UIManagement;
 using UnityEngine;

@@ -15,14 +15,14 @@ MonoBehaviour:
   WaveList:
   - EnemyWave:
       Sprite: {fileID: -1915811620432948212, guid: 9baf3a9fc6b03564fbc5743d5fc078ab, type: 3}
-      SpawnCount: 3
+      SpawnCount: 4
       Radius: 0.35
       Hp: 1
       Speed: 1
       Dps: 1
       ExpReward: 1
     SpawnType: 0
-    SpawnFrequency: 1
+    SpawnFrequency: 3
     SegmentLength: 30
   - EnemyWave:
       Sprite: {fileID: 7147128031865123269, guid: 1818ab4429a569d4e9796516cf314b9b, type: 3}
@@ -37,25 +37,25 @@ MonoBehaviour:
     SegmentLength: 30
   - EnemyWave:
       Sprite: {fileID: -7953397730858328457, guid: b88901b6dca366c4cb2e7ea454cddf89, type: 3}
-      SpawnCount: 3
+      SpawnCount: 30
       Radius: 0.4
-      Hp: 15
+      Hp: 10
       Speed: 1.4
       Dps: 3
       ExpReward: 3
-    SpawnType: 0
-    SpawnFrequency: 1
+    SpawnType: 1
+    SpawnFrequency: 3
     SegmentLength: 30
   - EnemyWave:
       Sprite: {fileID: -2125129744969601857, guid: 69a17661b01c94a4ab7dd6fa6e49b4d9, type: 3}
-      SpawnCount: 4
+      SpawnCount: 10
       Radius: 0.58
       Hp: 25
       Speed: 3
       Dps: 4
       ExpReward: 4
-    SpawnType: 0
-    SpawnFrequency: 1
+    SpawnType: 2
+    SpawnFrequency: 3
     SegmentLength: 30
   - EnemyWave:
       Sprite: {fileID: 5404717111500087310, guid: 4312f2717f1e71a4aac5c1f79696496e, type: 3}

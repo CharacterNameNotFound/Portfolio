@@ -37,6 +37,13 @@ namespace Game.GameMode.Session.Game.Data.Entities
             CurrentHp = playerStats.CurrentHp;
             CollectionRadius = playerStats.CollectionRadius;
             RequiredExpPerLevel = playerStats.RequiredExpPerLevel;
+
+            ProjectileCount = playerStats.ProjectileCount;
+            DamageModifier = playerStats.DamageModifier;
+            CooldownModifier = playerStats.CooldownModifier;
+            RadiusModifier = playerStats.RadiusModifier;
+
+            Level = 1;
         }
 
     }

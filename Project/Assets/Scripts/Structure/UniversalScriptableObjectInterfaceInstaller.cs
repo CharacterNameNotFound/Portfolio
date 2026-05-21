@@ -12,9 +12,23 @@ namespace Structure.GameInstalling
     public class UniversalScriptableObjectInterfaceInstaller : Zenject.ScriptableObjectInstaller
     {
         [SerializeField] private List<ScriptableObject> _dataObject = new ();
-
+        [SerializeField] private bool _isCached;
+        
         public override void InstallBindings()
         {
+            if (_isCached)
+            {
+                foreach (var item in _dataObject)
+                {
+                    foreach (Type type in item.GetType().GetInterfaces())
+                    {
+                        Container.Bind(type).FromInstance(item).AsCached();
+                    }
+                }
+                
+                return;
+            }
+            
             foreach (var item in _dataObject)
             {
                 foreach (Type type in item.GetType().GetInterfaces())

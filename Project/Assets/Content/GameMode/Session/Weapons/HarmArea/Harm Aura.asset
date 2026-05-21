@@ -10,14 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 488beb1dca3a41c28d313b17432b392f, type: 3}
-  m_Name: HarmAura
+  m_Name: Harm Aura
   m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Game.Weapons.HarmAura.HarmAura
-  MaxCooldown: 1
+  _description: Deals damage around character
+  _upgradeDescription: Deals more DAMAGE and has bigger RADIUS
+  _itemSprite: {fileID: 0}
+  MaxLevel: 6
+  BaseCooldown:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  CurrentLevel: 0
   _auraPrefab:
     m_AssetGUID: d9f238deb5c2752469759009eab8f16c
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  Damage: 1
-  Radius: 3
+  Damage:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  Radius:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8

@@ -10,11 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99d90cd8932f44c49a50ba3873498070, type: 3}
-  m_Name: SwordWeapon
+  m_Name: Sword
   m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Game.Weapons.Sword.SwordWeapon
-  BaseCooldown: 6
-  MaxCooldown: 6
-  CurrentMaxCooldown: 0
+  _description: Projectiles that penetrate enemies
+  _upgradeDescription: More damage and less cooldown
+  _itemSprite: {fileID: 0}
+  MaxLevel: 6
+  BaseCooldown:
+  - 6
+  - 5.5
+  - 5
+  - 4.5
+  - 4
+  - 3.5
+  CurrentLevel: 1
   _assetReference:
     m_AssetGUID: 713670e009990be478cd4282d7a66445
     m_SubObjectName: 
@@ -22,7 +31,13 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   _pooledCount: 20
-  _damage: 3
+  _damage:
+  - 10
+  - 15
+  - 20
+  - 25
+  - 30
+  - 35
   _projectileCount: 1
   _projectileExtends: {x: 0.5, y: 1}
   _projectileSpeed: 15

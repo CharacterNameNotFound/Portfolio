@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Game.GameMode.Session.Controller;
 using Game.GameMode.Session.Controller.GameInitialization;
 using Game.GameMode.Session.Game.Data;
 using Game.GameMode.Session.Game.Data.Entities;
@@ -8,7 +7,6 @@ using Game.GameMode.Session.Game.Systems.Enemies;
 using Game.GameMode.Session.Game.Systems.Player;
 using Game.GameMode.Session.Game.Systems.Weapons;
 using Game.GameMode.Session.Game.Utilities;
-using Game.GameMode.Session.Pools;
 using Game.GameMode.Session.Pools.EnemyBuilding;
 using Game.GameMode.Session.Pools.ExperiencePool;
 using Game.GameMode.Session.WorldGeneration;
@@ -28,7 +26,6 @@ namespace Structure
             InstallLevelGeneration();
             InstallSessionSystems();
             InstallPools();
-            InstallWeapons();
         }
 
         private void InstallLevelGeneration()
@@ -45,6 +42,7 @@ namespace Structure
             Container.Bind<IPlayerSpawner>().To<PlayerSpawner>().AsSingle();
             Container.Bind<IScenarioDataInitializer>().To<ScenarioDataInitializer>().AsSingle();
             Container.Bind<IEnemyInitializer>().To<EnemyInitializer>().AsSingle();
+            Container.Bind<IItemInitializer>().To<ItemInitializer>().AsSingle();
             
             Container.Bind<SessionScreenHolder>().To<SessionScreenHolder>().AsSingle();
         }
@@ -79,12 +77,6 @@ namespace Structure
             Container.Bind<List<ExpGemComponent>>().To<List<ExpGemComponent>>().AsCached();
             Container.Bind<IPoolEntityBuilder<ExpGemComponent>>().To<ExpGemComponentEntityProvider>().AsCached();
             Container.Bind<ExpGemPool>().To<ExpGemPool>().AsCached();
-        }
-
-        private void InstallWeapons()
-        {
-            
-            
         }
         
         
