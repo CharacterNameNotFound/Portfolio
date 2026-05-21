@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Game.Items.BuffItem.RadiusProjectileBuffItem
   Description: Increase attack radius
   LevelUpDescription: Increase attack radius
-  _itemSprite: {fileID: 0}
+  _itemSprite: {fileID: -7625004224175597711, guid: dc3878ff0cd253845a805770a7e27aba, type: 3}
   MaxLevel: 6
-  CurrentLevel: 0
+  CurrentLevel: 1
   RadiusMods:
   - 1.15
   - 1.3

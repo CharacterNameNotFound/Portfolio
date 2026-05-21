@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d23705c77554f72a37e62347ba7e0dc, type: 3}
   m_Name: GameLevelScriptableInterfaceConfigurations
   m_EditorClassIdentifier: 
-  _dataObject: []
+  _dataObject:
+  - {fileID: 11400000, guid: 0e1d93399d1b9c74eb19bf7b4e08a100, type: 2}
+  - {fileID: 11400000, guid: a8b6ec69994b1d14a921e760207bf070, type: 2}
+  - {fileID: 11400000, guid: 7057c36fc25b4744b96e374596670f5b, type: 2}
+  - {fileID: 11400000, guid: 54c764c995427d94597726aeb4a6d1cd, type: 2}
+  - {fileID: 11400000, guid: c88c70a58805ac149a987db5120b5015, type: 2}
+  - {fileID: 11400000, guid: cfd540ec1c73c684094ddfb02850b945, type: 2}
+  - {fileID: 11400000, guid: 4d8848d2eeec1e24c8d86cf31791d289, type: 2}
+  _isCached: 1

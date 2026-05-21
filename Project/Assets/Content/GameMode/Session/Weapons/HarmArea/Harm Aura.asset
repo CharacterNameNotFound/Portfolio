@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Game.Weapons.HarmAura.HarmAura
   _description: Deals damage around character
   _upgradeDescription: Deals more DAMAGE and has bigger RADIUS
-  _itemSprite: {fileID: 0}
+  _itemSprite: {fileID: 6489356493643715890, guid: 55caf4856cc6edf458ee243d5e9ebd2c, type: 3}
   MaxLevel: 6
   BaseCooldown:
   - 1
@@ -23,7 +23,7 @@ MonoBehaviour:
   - 1
   - 1
   - 1
-  CurrentLevel: 0
+  CurrentLevel: 2
   _auraPrefab:
     m_AssetGUID: d9f238deb5c2752469759009eab8f16c
     m_SubObjectName: 

@@ -14,13 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Game.Items.BuffItem.ProjectileCountBuffItem
   Description: Add more projectiles
   LevelUpDescription: Add more projectiles
-  _itemSprite: {fileID: 0}
+  _itemSprite: {fileID: 3685075886381580619, guid: 5cbe93ecae9d6d7458330671bcbc9f8e, type: 3}
   MaxLevel: 6
-  CurrentLevel: 0
-  ProjectileCountMods:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
+  CurrentLevel: 1
+  ProjectileCountMods: 010000000200000003000000040000000500000006000000

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Game.Weapons.Sword.SwordWeapon
   _description: Projectiles that penetrate enemies
   _upgradeDescription: More damage and less cooldown
-  _itemSprite: {fileID: 0}
+  _itemSprite: {fileID: 2997947661738188690, guid: 1e042b9236237d345bfebc82b1769982, type: 3}
   MaxLevel: 6
   BaseCooldown:
   - 6
@@ -23,7 +23,7 @@ MonoBehaviour:
   - 4.5
   - 4
   - 3.5
-  CurrentLevel: 1
+  CurrentLevel: 2
   _assetReference:
     m_AssetGUID: 713670e009990be478cd4282d7a66445
     m_SubObjectName: 
@@ -31,6 +31,7 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   _pooledCount: 20
+  _sfx: {fileID: 8300000, guid: e573923cadda0b14ea0ed31b2e38ff5e, type: 3}
   _damage:
   - 10
   - 15

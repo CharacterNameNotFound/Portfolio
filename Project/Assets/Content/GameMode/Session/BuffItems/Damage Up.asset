@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Game.Items.BuffItem.DamageBuffItem
   Description: Deal more damage
   LevelUpDescription: Deal more damage
-  _itemSprite: {fileID: 0}
+  _itemSprite: {fileID: 8193041493193330596, guid: 3cb125a05dd3366428f65385b1346d92, type: 3}
   MaxLevel: 6
   CurrentLevel: 0
   DamageMods:

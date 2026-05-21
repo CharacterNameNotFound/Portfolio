@@ -1,7 +1,6 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
-using MergetoolGui;
 using UnityEngine;
 
 namespace Game.GameMode.Session.Game.Items.Weapons

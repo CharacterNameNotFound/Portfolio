@@ -29,7 +29,7 @@ MonoBehaviour:
     MoveSpeed: 5
     MaxHp: 100
     CollectionRadius: 1.5
-    RequiredExpPerLevel: 10
+    RequiredExpPerLevel: 5
     ProjectileCount: 0
     DamageModifier: 1
     CooldownModifier: 1

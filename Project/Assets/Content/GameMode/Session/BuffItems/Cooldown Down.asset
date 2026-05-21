@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Game.Items.BuffItem.CooldownModifierBuffItem
   Description: Reduce cooldown
   LevelUpDescription: Reduce cooldown
+  _itemSprite: {fileID: -7661275203957002469, guid: f72e59cbf1fc0c44cbb96d367d8b37ee, type: 3}
   MaxLevel: 6
   CurrentLevel: 0
   CooldownMods:

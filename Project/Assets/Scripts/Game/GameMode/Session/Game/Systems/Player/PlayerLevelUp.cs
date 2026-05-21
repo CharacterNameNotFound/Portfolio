@@ -100,7 +100,7 @@ namespace Game.GameMode.Session.Game.Systems.Player
                 await item.OnObtained(sessionRegistry, cancellationToken);
             }
 
-            if (item.GetLevel() == item.GetMaxLevel())
+            if (item.GetLevel() + 1 == item.GetMaxLevel())
             {
                 _combinedUpgradable.Remove(item);
             }

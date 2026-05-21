@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Game.Weapons.RedBalls.RedBallWeapon
   _description: Fires projectiles in random directions
   _upgradeDescription: More Projectiles and Damage
-  _itemSprite: {fileID: 0}
+  _itemSprite: {fileID: 6893286826285539681, guid: add89deef2dbf654680d26ada68da1a7, type: 3}
   MaxLevel: 6
   BaseCooldown:
   - 8
@@ -23,7 +23,7 @@ MonoBehaviour:
   - 8
   - 8
   - 8
-  CurrentLevel: 0
+  CurrentLevel: 1
   _assetReference:
     m_AssetGUID: 71d743a832514414cad5145c9d46a548
     m_SubObjectName: 
@@ -31,6 +31,7 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   _pooledCount: 100
+  _sfx: {fileID: 8300000, guid: 48b8c692acf9f2b4d945f0d2808dcb92, type: 3}
   _damage:
   - 4
   - 8
