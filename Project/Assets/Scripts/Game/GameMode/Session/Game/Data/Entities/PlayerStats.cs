@@ -11,7 +11,13 @@ namespace Game.GameMode.Session.Game.Data.Entities
         public float MaxHp;
         public float CollectionRadius;
         public float RequiredExpPerLevel;
-        
+
+
+        [Header("Weapon stats")] 
+        public int ProjectileCount;
+        public float DamageModifier = 1;
+        public float CooldownModifier = 1;
+        public float RadiusModifier = 1;
         
         
         [HideInInspector] public float CurrentHp;

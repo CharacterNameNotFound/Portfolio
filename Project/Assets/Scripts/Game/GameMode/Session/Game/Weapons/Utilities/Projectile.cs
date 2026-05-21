@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.AddressableAssets;
 using Utils.UtilityTypes.ObjectPooling;
 
@@ -5,6 +6,11 @@ namespace Game.GameMode.Session.Game.Weapons.Utilities
 {
     public class Projectile : PoolableGameObject
     {
+        public Transform Transform;
+        
+        [HideInInspector] public Vector2 Direction;
+        [HideInInspector] public float ProjectileTime;
+        
         public override void OnPooled()
         {
             gameObject.SetActive(false);
@@ -14,5 +20,6 @@ namespace Game.GameMode.Session.Game.Weapons.Utilities
         {
             Addressables.ReleaseInstance(gameObject);
         }
+        
     }
 }

@@ -7,18 +7,29 @@ namespace Game.GameMode.Session.Game.Weapons
 {
     public abstract class CooldownItem : ScriptableObject, IItem
     {
-        public float MaxCooldown;
+        public float BaseCooldown;
+        [HideInInspector] public float MaxCooldown;
+        [HideInInspector] public float CurrentMaxCooldown;
         
         protected float _currentCooldown;
         
         public virtual UniTask Initialize(CancellationToken cancellationToken)
         {
+            MaxCooldown = BaseCooldown;
             _currentCooldown = MaxCooldown;
             return UniTask.CompletedTask;
         }
 
         public virtual UniTask OnObtained(SessionRegistry sessionRegistry, CancellationToken cancellationToken)
         {
+            sessionRegistry.ObtainedItems.Add(this);
+
+            return UniTask.CompletedTask;
+        }
+
+        public virtual UniTask OnStatsUpdated(SessionRegistry sessionRegistry, CancellationToken cancellationToken)
+        {
+            CurrentMaxCooldown = MaxCooldown * sessionRegistry.PlayerStats.CooldownModifier;
             return UniTask.CompletedTask;
         }
 
@@ -33,5 +44,11 @@ namespace Game.GameMode.Session.Game.Weapons
         {
             return UniTask.CompletedTask;
         }
+
+        protected void RestartCooldown()
+        {
+            _currentCooldown = CurrentMaxCooldown;
+        }
+
     }
 }

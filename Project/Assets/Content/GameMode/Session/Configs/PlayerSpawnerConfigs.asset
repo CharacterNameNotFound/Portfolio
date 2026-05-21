@@ -28,9 +28,13 @@ MonoBehaviour:
     CameraSize: 14
     MoveSpeed: 5
     MaxHp: 100
-    CollectionRadius: 1.5
+    CollectionRadius: 1
     RequiredExpPerLevel: 50
+    ProjectileCount: 0
+    DamageModifier: 1
+    CooldownModifier: 1
+    RadiusModifier: 1
     CurrentHp: 100
     Level: 1
     CurrentExp: 0
-  <HarmAura>k__BackingField: {fileID: 11400000, guid: 7057c36fc25b4744b96e374596670f5b, type: 2}
+  <TestWeapon>k__BackingField: {fileID: 11400000, guid: a8b6ec69994b1d14a921e760207bf070, type: 2}

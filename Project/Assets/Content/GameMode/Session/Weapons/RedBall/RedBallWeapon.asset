@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c189821f36e9453394b51c9175937589, type: 3}
+  m_Name: RedBallWeapon
+  m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Game.Weapons.RedBalls.RedBallWeapon
+  BaseCooldown: 8
+  MaxCooldown: 8
+  CurrentMaxCooldown: 8
+  _assetReference:
+    m_AssetGUID: 71d743a832514414cad5145c9d46a548
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  _pooledCount: 100
+  _damage: 10
+  _projectileCount: 2
+  _projectileRadius: 0.5
+  _projectileSpeed: 6
+  _projectileLifeTime: 6
+  _projectileShootingDelay: 0.3

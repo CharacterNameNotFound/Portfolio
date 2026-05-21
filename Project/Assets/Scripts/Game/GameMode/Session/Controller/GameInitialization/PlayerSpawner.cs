@@ -30,8 +30,8 @@ namespace Game.GameMode.Session.Controller.GameInitialization
 
             _sessionRegistry.PlayerStats = new PlayerStats(_playerSpawnerConfigs.PlayerStats);
             
-            await _playerSpawnerConfigs.HarmAura.Initialize(cancellationToken);
-            await _playerSpawnerConfigs.HarmAura.OnObtained(_sessionRegistry, cancellationToken);
+            await _playerSpawnerConfigs.TestWeapon.Initialize(cancellationToken);
+            await _playerSpawnerConfigs.TestWeapon.OnObtained(_sessionRegistry, cancellationToken);
         }
 
         public async UniTask SpawnCamera(CancellationToken cancellationToken)
