@@ -5,6 +5,5 @@ namespace Game.GameMode.Session.Game.Data.Enemies
         Random,
         Square,
         Ring,
-        GroupCircle
     }
 }

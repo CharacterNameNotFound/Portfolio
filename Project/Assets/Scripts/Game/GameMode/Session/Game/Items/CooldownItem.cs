@@ -3,7 +3,7 @@ using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
 using UnityEngine;
 
-namespace Game.GameMode.Session.Game.Weapons
+namespace Game.GameMode.Session.Game.Items
 {
     public abstract class CooldownItem : ScriptableObject, IItem
     {
@@ -16,7 +16,9 @@ namespace Game.GameMode.Session.Game.Weapons
         public virtual UniTask Initialize(CancellationToken cancellationToken)
         {
             MaxCooldown = BaseCooldown;
-            _currentCooldown = MaxCooldown;
+            CurrentMaxCooldown = MaxCooldown;
+            _currentCooldown = CurrentMaxCooldown;
+            
             return UniTask.CompletedTask;
         }
 

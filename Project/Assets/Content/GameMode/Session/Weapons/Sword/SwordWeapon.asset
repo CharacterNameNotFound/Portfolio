@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d90cd8932f44c49a50ba3873498070, type: 3}
+  m_Name: SwordWeapon
+  m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Game.Weapons.Sword.SwordWeapon
+  BaseCooldown: 6
+  MaxCooldown: 6
+  CurrentMaxCooldown: 0
+  _assetReference:
+    m_AssetGUID: 713670e009990be478cd4282d7a66445
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  _pooledCount: 20
+  _damage: 3
+  _projectileCount: 1
+  _projectileExtends: {x: 0.5, y: 1}
+  _projectileSpeed: 15
+  _projectileLifeTime: 0.5
+  _projectileShootingDelay: 0.3

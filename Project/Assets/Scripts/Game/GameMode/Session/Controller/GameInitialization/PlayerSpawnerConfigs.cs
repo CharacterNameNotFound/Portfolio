@@ -1,7 +1,6 @@
 using Game.GameMode.Session.Game.Data;
 using Game.GameMode.Session.Game.Data.Entities;
-using Game.GameMode.Session.Game.Weapons.HarmAura;
-using Game.GameMode.Session.Game.Weapons.RedBalls;
+using Game.GameMode.Session.Game.Items;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -12,7 +11,7 @@ namespace Game.GameMode.Session.Controller.GameInitialization
         [field: SerializeField] public AssetReferenceGameObject PlayerCharacterComponent { get; private set; }
         [field: SerializeField] public AssetReferenceGameObject PlayerCamera { get; private set; }
         [field: SerializeField] public PlayerStats PlayerStats { get; private set; }
-        [field: SerializeField] public RedBallWeapon TestWeapon { get; private set; }
+        [field: SerializeField] public SwordWeapon TestWeapon { get; private set; }
     }
     
 }

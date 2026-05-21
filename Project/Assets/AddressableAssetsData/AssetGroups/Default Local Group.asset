@@ -105,6 +105,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 713670e009990be478cd4282d7a66445
+    m_Address: Assets/Content/GameMode/Session/Weapons/Sword/SwordProjectile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 71d743a832514414cad5145c9d46a548
     m_Address: Assets/Content/GameMode/Session/Weapons/RedBall/RedBall.prefab
     m_ReadOnly: 0

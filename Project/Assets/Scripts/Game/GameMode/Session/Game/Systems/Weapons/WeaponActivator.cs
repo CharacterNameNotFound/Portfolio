@@ -1,7 +1,6 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
-using Game.GameMode.Session.Game.Weapons;
 
 namespace Game.GameMode.Session.Game.Systems.Weapons
 {

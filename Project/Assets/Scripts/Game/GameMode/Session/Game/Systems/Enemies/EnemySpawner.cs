@@ -77,7 +77,6 @@ namespace Game.GameMode.Session.Game.Systems.Enemies
                 SpawnType.Random => GetRandomPoint(sessionRegistry, spawnCount, instanceCount),
                 SpawnType.Square => GetSquarePoint(sessionRegistry, spawnCount, instanceCount),
                 SpawnType.Ring => GetRingPoint(sessionRegistry, spawnCount, instanceCount),
-                SpawnType.GroupCircle => GetGroupCirclePoint(sessionRegistry, spawnCount, instanceCount),
                 _ => throw new ArgumentOutOfRangeException(nameof(spawnType), spawnType, null)
             };
         }
@@ -91,31 +90,40 @@ namespace Game.GameMode.Session.Game.Systems.Enemies
             return position;
         }
         
+        // not perfect square, but when enemies will close up, I will get the result I wanted
         private Vector3 GetSquarePoint(SessionRegistry sessionRegistry, int spawnCount, int instanceCount)
         {
-            Vector2 position = sessionRegistry.PlayerCameraComponent.CameraSize * Random.onUnitCircle * 1.2f;
+            float radius = sessionRegistry.PlayerCameraComponent.CameraSize * 1.5f;
 
-            position.x *= sessionRegistry.PlayerCameraComponent.Camera.Lens.Aspect;
+            float radialDisplacement = Mathf.PI * 2 / spawnCount;
 
-            return position;
+            float pointOnHorizontal = Mathf.Sin(radialDisplacement * instanceCount);
+            float pointOnVertical = Mathf.Cos(radialDisplacement * instanceCount);
+
+            if (Mathf.Abs(pointOnHorizontal) < Mathf.Abs(pointOnVertical))
+            {
+                return new Vector3(
+                    radius * pointOnHorizontal * sessionRegistry.PlayerCameraComponent.Camera.Lens.Aspect,
+                    radius * Mathf.Sign(pointOnVertical),
+                    0);
+            }
+
+            return new Vector3(
+                radius * sessionRegistry.PlayerCameraComponent.Camera.Lens.Aspect * Mathf.Sign(pointOnHorizontal),
+                radius * pointOnVertical,
+                0);
         }
         
         private Vector3 GetRingPoint(SessionRegistry sessionRegistry, int spawnCount, int instanceCount)
         {
-            Vector2 position = sessionRegistry.PlayerCameraComponent.CameraSize * Random.onUnitCircle * 1.2f;
+            float radius = sessionRegistry.PlayerCameraComponent.CameraSize * 1.2f * sessionRegistry.PlayerCameraComponent.Camera.Lens.Aspect;
 
-            position.x *= sessionRegistry.PlayerCameraComponent.Camera.Lens.Aspect;
-
-            return position;
-        }
-        
-        private Vector3 GetGroupCirclePoint(SessionRegistry sessionRegistry, int spawnCount, int instanceCount)
-        {
-            Vector2 position = sessionRegistry.PlayerCameraComponent.CameraSize * Random.onUnitCircle * 1.2f;
-
-            position.x *= sessionRegistry.PlayerCameraComponent.Camera.Lens.Aspect;
-
-            return position;
+            float radialDisplacement = Mathf.PI * 2 / spawnCount;
+            
+            return new Vector3(
+                Mathf.Sin(radialDisplacement * instanceCount) * radius,
+                Mathf.Cos(radialDisplacement * instanceCount) * radius,
+                0);
         }
 
         public void SetEnemyStats(EnemyComponent enemyComponent, EnemyWave wave)

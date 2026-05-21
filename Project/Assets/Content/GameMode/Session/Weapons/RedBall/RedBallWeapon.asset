@@ -25,6 +25,6 @@ MonoBehaviour:
   _damage: 10
   _projectileCount: 2
   _projectileRadius: 0.5
-  _projectileSpeed: 6
+  _projectileSpeed: 10
   _projectileLifeTime: 6
   _projectileShootingDelay: 0.3

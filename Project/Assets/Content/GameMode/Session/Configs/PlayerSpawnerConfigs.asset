@@ -28,7 +28,7 @@ MonoBehaviour:
     CameraSize: 14
     MoveSpeed: 5
     MaxHp: 100
-    CollectionRadius: 1
+    CollectionRadius: 1.5
     RequiredExpPerLevel: 50
     ProjectileCount: 0
     DamageModifier: 1
@@ -37,4 +37,4 @@ MonoBehaviour:
     CurrentHp: 100
     Level: 1
     CurrentExp: 0
-  <TestWeapon>k__BackingField: {fileID: 11400000, guid: a8b6ec69994b1d14a921e760207bf070, type: 2}
+  <TestWeapon>k__BackingField: {fileID: 11400000, guid: 0e1d93399d1b9c74eb19bf7b4e08a100, type: 2}

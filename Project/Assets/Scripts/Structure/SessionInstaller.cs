@@ -8,7 +8,6 @@ using Game.GameMode.Session.Game.Systems.Enemies;
 using Game.GameMode.Session.Game.Systems.Player;
 using Game.GameMode.Session.Game.Systems.Weapons;
 using Game.GameMode.Session.Game.Utilities;
-using Game.GameMode.Session.Game.Weapons;
 using Game.GameMode.Session.Pools;
 using Game.GameMode.Session.Pools.EnemyBuilding;
 using Game.GameMode.Session.Pools.ExperiencePool;

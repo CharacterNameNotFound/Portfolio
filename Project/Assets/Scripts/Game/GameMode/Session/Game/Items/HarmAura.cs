@@ -8,7 +8,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using Utils.UtilityTypes.AssetReferencing;
 
-namespace Game.GameMode.Session.Game.Weapons.HarmAura
+namespace Game.GameMode.Session.Game.Items
 {
     public class HarmAura : CooldownItem
     {

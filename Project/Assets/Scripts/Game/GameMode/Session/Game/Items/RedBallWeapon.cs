@@ -3,13 +3,13 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
 using Game.GameMode.Session.Game.Data.Entities;
+using Game.GameMode.Session.Game.Items.Utilities;
 using Game.GameMode.Session.Game.Utilities;
-using Game.GameMode.Session.Game.Weapons.Utilities;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using Utils.UtilityTypes.ObjectPooling;
 
-namespace Game.GameMode.Session.Game.Weapons.RedBalls
+namespace Game.GameMode.Session.Game.Items
 {
     public class RedBallWeapon : CooldownItem
     {
@@ -74,7 +74,7 @@ namespace Game.GameMode.Session.Game.Weapons.RedBalls
 
             await CreateProjectile(sessionRegistry, cancellationToken);
 
-            if (_projectilesShot == _projectileCount + sessionRegistry.PlayerStats.ProjectileCount)
+            if (_projectilesShot >= _projectileCount + sessionRegistry.PlayerStats.ProjectileCount)
             {
                 _projectilesShot = 0;
                 RestartCooldown();

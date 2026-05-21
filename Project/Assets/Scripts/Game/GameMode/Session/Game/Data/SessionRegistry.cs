@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Game.GameMode.Session.Game.Data.Entities;
-using Game.GameMode.Session.Game.Weapons;
+using Game.GameMode.Session.Game.Items;
 
 namespace Game.GameMode.Session.Game.Data
 {
