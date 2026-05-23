@@ -85,6 +85,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48b956721d001dc48840efdad52ff43e
+    m_Address: Assets/Content/VFX/FlyingText.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 493ed7a5e1932d74198204da4a50d34a
     m_Address: Assets/Music/PixelRPG_Village_MusicPack/Music/RPG_Village_10.wav
     m_ReadOnly: 0

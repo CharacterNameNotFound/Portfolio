@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad59d9662e843caa08dcc57856b2f28, type: 3}
+  m_Name: Game Wide Systems Installer
+  m_EditorClassIdentifier: 
+  _audioManagerConfigurations: {fileID: 11400000, guid: b6482b5ba0316e649b58b279a5891193, type: 2}
+  _uiManagementPrefab: {fileID: 3583885222703909278, guid: 983cf6179a72409408af4e8251375b1f, type: 3}
+  _cameraManager: {fileID: 3521445488527324371, guid: 7163b03d9f846c14eb39f7bc16fb7df4, type: 3}
+  _genericPooledObjectHostProvider: {fileID: 6622671704068036262, guid: c56c91a434eb8be4cac6a510e28779f2, type: 3}

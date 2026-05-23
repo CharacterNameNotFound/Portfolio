@@ -6,6 +6,7 @@ using GameWideSystems.AudioManager;
 using GameWideSystems.GameSceneManagement;
 using GameWideSystems.GameStateManagement;
 using GameWideSystems.LocalizationWrapper;
+using GameWideSystems.ScriptedVisualEffectManagement.FlyingTextScriptedVisualEffects;
 using UnityEngine;
 using Zenject;
 
@@ -18,7 +19,7 @@ namespace Game.GameInitialization
         private GameStateManager _gameStateManager;
         private ILocalizationManager _localizationManager;
         private ILoadingScreenManager _loadingScreenManager;
-
+        private FlyingTextScriptedVisualEffectRegisterer _flyingTextScriptedVisualEffectRegisterer;
 
         [Inject]
         private void Construct(
@@ -26,13 +27,15 @@ namespace Game.GameInitialization
             InitializationGameMode initializationGameMode,
             GameStateManager gameStateManager,
             ILocalizationManager localizationManager,
-            ILoadingScreenManager loadingScreenManager)
+            ILoadingScreenManager loadingScreenManager,
+            FlyingTextScriptedVisualEffectRegisterer flyingTextScriptedVisualEffectRegisterer)
         {
             _audioManager = audioManager;
             _initializationGameMode = initializationGameMode;
             _gameStateManager = gameStateManager;
             _localizationManager = localizationManager;
             _loadingScreenManager = loadingScreenManager;
+            _flyingTextScriptedVisualEffectRegisterer = flyingTextScriptedVisualEffectRegisterer;
         }
         
         private IEnumerator Start()
@@ -44,6 +47,7 @@ namespace Game.GameInitialization
         {
             Transform proceduralHolderTransform = FindAnyObjectByType<ProjectContext>().transform;
 
+            await _flyingTextScriptedVisualEffectRegisterer.Register(cancellationToken);
             await _loadingScreenManager.Show(cancellationToken);
             await _audioManager.Initialize(proceduralHolderTransform, cancellationToken);
             //await _localizationManager.Initialize();

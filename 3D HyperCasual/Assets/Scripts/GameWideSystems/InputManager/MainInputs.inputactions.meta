@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b518f8806d3441d4788e38ce6b98f6a9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 8404be70184654265930450def6a9037, type: 3}
+  generateWrapperCode: 1
+  wrapperCodePath: Assets/Scripts/GameWideSystems/InputManager/Controls/MainInputs.cs
+  wrapperClassName: 
+  wrapperCodeNamespace: 

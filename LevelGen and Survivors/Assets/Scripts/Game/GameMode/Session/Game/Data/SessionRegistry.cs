@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Game.GameMode.Session.Game.Data.Entities;
 using Game.GameMode.Session.Game.Items;
 using GameWideSystems.AudioManager;
+using GameWideSystems.ScriptedVisualEffectManagement;
 
 namespace Game.GameMode.Session.Game.Data
 {
@@ -25,5 +26,6 @@ namespace Game.GameMode.Session.Game.Data
         
         // external systems
         public AudioManager AudioManager;
+        public IScriptedVisualEffectManager ScriptedVisualEffectManager;
     }
 }

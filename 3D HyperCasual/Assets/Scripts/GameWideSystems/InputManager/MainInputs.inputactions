@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "MainInputs",
+    "maps": [
+        {
+            "name": "Pointer",
+            "id": "8b513f95-5087-4c71-b77e-9cd13f246788",
+            "actions": [
+                {
+                    "name": "Press",
+                    "type": "Button",
+                    "id": "d5431818-a0ed-422b-bcdb-1a5f4247638f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PointerPosition",
+                    "type": "Value",
+                    "id": "fdc24da4-6bfb-4cd8-8c85-1e577963566c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "676b3d3c-29e3-4254-95ea-9f6e267a3d11",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f0d621f-14c0-4306-9151-4df6c1dbbcb8",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PointerPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

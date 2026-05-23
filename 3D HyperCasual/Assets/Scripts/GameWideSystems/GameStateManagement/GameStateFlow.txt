@@ -1,0 +1,3 @@
+﻿Game state flow consist of game mode controllers grouped into stack
+Game state in stack can add mode to stack but added game mode should have serialization level equal or lower than 
+previous game state in stack

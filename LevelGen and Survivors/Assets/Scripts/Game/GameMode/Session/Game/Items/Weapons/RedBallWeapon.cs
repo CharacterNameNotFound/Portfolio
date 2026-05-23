@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using System.Globalization;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
 using Game.GameMode.Session.Game.Data.Entities;
 using Game.GameMode.Session.Game.Items.Utilities;
 using Game.GameMode.Session.Game.Utilities;
+using GameWideSystems.ScriptedVisualEffectManagement.FlyingTextScriptedVisualEffects;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using Utils.UtilityTypes.ObjectPooling;
@@ -60,7 +62,7 @@ namespace Game.GameMode.Session.Game.Items.Weapons
             CancellationToken cancellationToken)
         {
             await base.UpdateInternal(deltaTime, itemIndex, sessionRegistry, cancellationToken);
-            UpdateProjectiles(deltaTime, sessionRegistry);
+            UpdateProjectiles(deltaTime, sessionRegistry, cancellationToken);
             
             if (_currentCooldown > 0)
             {
@@ -117,7 +119,7 @@ namespace Game.GameMode.Session.Game.Items.Weapons
             _projectilesShot++;
         }
 
-        private void UpdateProjectiles(float deltaTime, SessionRegistry sessionRegistry)
+        private void UpdateProjectiles(float deltaTime, SessionRegistry sessionRegistry, CancellationToken cancellationToken)
         {
             float projectileRadius = _projectileRadius * sessionRegistry.PlayerStats.RadiusModifier;
             float damage = _damage[CurrentLevel - 1] * sessionRegistry.PlayerStats.DamageModifier;
@@ -127,7 +129,7 @@ namespace Game.GameMode.Session.Game.Items.Weapons
                 _activeProjectiles[i].Transform.position += (Vector3) _activeProjectiles[i].Direction * (deltaTime * _projectileSpeed);
 
                 _activeProjectiles[i].ProjectileTime -= deltaTime;
-                if (!ProcessCollision(_activeProjectiles[i], sessionRegistry, projectileRadius, damage) && 
+                if (!ProcessCollision(_activeProjectiles[i], sessionRegistry, projectileRadius, damage, cancellationToken) && 
                     _activeProjectiles[i].ProjectileTime > 0)
                 {
                     continue;
@@ -141,7 +143,7 @@ namespace Game.GameMode.Session.Game.Items.Weapons
             
         }
 
-        private bool ProcessCollision(Projectile projectile, SessionRegistry sessionRegistry, float projectileRadius, float damage)
+        private bool ProcessCollision(Projectile projectile, SessionRegistry sessionRegistry, float projectileRadius, float damage, CancellationToken cancellationToken)
         {
             Vector3 projectilePosition = projectile.Transform.position;
             bool result = false;
@@ -152,7 +154,19 @@ namespace Game.GameMode.Session.Game.Items.Weapons
                 {
                     continue;
                 }
-
+                
+                sessionRegistry.ScriptedVisualEffectManager.Play<FlyingTextScriptedVisualEffect>(
+                    new FlyingTextScriptedVisualEffectParams(
+                        null, 
+                        enemy.Transform.position, 
+                        enemy.Transform.position + Vector3.up, 
+                        0.5f, 
+                        0.5f, 
+                        0.5f, 
+                        damage.ToString(CultureInfo.InvariantCulture), 
+                        1f), 
+                    cancellationToken);
+                
                 enemy.Hp -= damage;
                 result = true;
             }

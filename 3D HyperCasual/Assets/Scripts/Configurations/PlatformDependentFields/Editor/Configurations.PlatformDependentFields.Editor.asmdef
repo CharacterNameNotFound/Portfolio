@@ -1,0 +1,18 @@
+{
+    "name": "Configurations.PlatformDependentFields.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6fb46112db50e9444a8bebc860de33be"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

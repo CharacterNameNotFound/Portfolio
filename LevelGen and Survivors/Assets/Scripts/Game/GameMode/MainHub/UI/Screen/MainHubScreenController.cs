@@ -12,6 +12,7 @@ using UnityEngine.UI;
 
 namespace Game.GameMode.MainHub.UI.Screen
 {
+    // There is generic state machine for complex UI initially I avoided using it, and that was mistake...
     public class MainHubScreenController : UIScreen<MainHubScreenParams, MainHubScreenDependencies>
     {
         [field: SerializeField] private Button _playSelectionButton;

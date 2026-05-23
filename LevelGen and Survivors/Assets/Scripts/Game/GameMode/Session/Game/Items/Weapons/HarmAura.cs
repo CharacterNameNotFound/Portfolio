@@ -1,8 +1,10 @@
+using System.Globalization;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.GameMode.Session.Game.Data;
 using Game.GameMode.Session.Game.Data.Entities;
 using Game.GameMode.Session.Game.Utilities;
+using GameWideSystems.ScriptedVisualEffectManagement.FlyingTextScriptedVisualEffects;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceProviders;
@@ -71,6 +73,18 @@ namespace Game.GameMode.Session.Game.Items.Weapons
                     continue;
                 }
 
+                sessionRegistry.ScriptedVisualEffectManager.Play<FlyingTextScriptedVisualEffect>(
+                    new FlyingTextScriptedVisualEffectParams(
+                        null, 
+                        enemy.Transform.position, 
+                        enemy.Transform.position + Vector3.up, 
+                        0.5f, 
+                        0.5f, 
+                        0.5f, 
+                        damage.ToString(CultureInfo.InvariantCulture), 
+                        1f), 
+                    cancellationToken);
+                
                 enemy.Hp -= damage;
             }
 
