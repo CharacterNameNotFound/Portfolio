@@ -1,5 +1,8 @@
 using System;
 using GameWideSystems.InputManager.GestureReaders.Keyboard;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 
 namespace GameWideSystems.InputManager.ReadingCores.Keyboard
 {
@@ -21,7 +24,7 @@ namespace GameWideSystems.InputManager.ReadingCores.Keyboard
                 return;
             }
             
-            OnGestureRead?.Invoke(new KeyboardText(obj));
+            OnGestureRead?.Invoke(new KeyboardAny());
         }
 
         public void Dispose()
@@ -30,6 +33,7 @@ namespace GameWideSystems.InputManager.ReadingCores.Keyboard
 
         public void Tick()
         {
+
         }
 
         public void Activate()

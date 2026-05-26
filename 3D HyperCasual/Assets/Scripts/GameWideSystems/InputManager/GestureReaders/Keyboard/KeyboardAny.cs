@@ -1,13 +1,11 @@
 namespace GameWideSystems.InputManager.GestureReaders.Keyboard
 {
-    public class KeyboardText : IGesture
+    public class KeyboardAny : IGesture
     {
         public InputType InputType => InputType.Keyboard;
-        public char Key;
 
-        public KeyboardText(char c)
+        public KeyboardAny()
         {
-            Key = c;
         }
     }
 }

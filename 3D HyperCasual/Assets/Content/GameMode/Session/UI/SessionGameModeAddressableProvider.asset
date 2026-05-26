@@ -14,10 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Controller.SessionGameModeAddressableProvider
   <ScreenReference>k__BackingField:
     _invariantValue:
-      m_AssetGUID: 
+      m_AssetGUID: f958fb8b60d8fb145b3ec78b2f1bc8ed
       m_SubObjectName: 
       m_SubObjectType: 
       m_SubObjectGUID: 
       m_EditorAssetChanged: 0
     _platformOverride: 0
-    _platformDependantValues: []
+    _platformDependantValues:
+    - m_AssetGUID: 
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    - m_AssetGUID: 
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    - m_AssetGUID: 
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0

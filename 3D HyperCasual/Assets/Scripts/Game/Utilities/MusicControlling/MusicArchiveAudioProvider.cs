@@ -10,10 +10,12 @@ namespace Game.Utilities.MusicControlling
         [SerializeField] private List<AssetReference> _menuMusic;
         [SerializeField] private List<AssetReference> _sessionMusic;
         [SerializeField] private List<AssetReference> _buttonClick;
+        [SerializeField] private AssetReference _bitSFX;
 
         public IReadOnlyList<AssetReference> MenuList => _menuMusic;
         public IReadOnlyList<AssetReference> SessionList => _sessionMusic;
         public IReadOnlyList<AssetReference> ButtonList => _buttonClick;
+        public AssetReference BitSFX => _bitSFX;
 
         
         public IReadOnlyList<AssetReference> GetAssetList(MusicGroup musicGroup)

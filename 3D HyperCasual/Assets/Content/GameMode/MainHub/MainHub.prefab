@@ -264,7 +264,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <RootCanvasGroup>k__BackingField: {fileID: 8640315290371856950}
   _playSelectionButton: {fileID: 206967319827607864}
-  _continueSelectionButton: {fileID: 0}
 --- !u!225 &8640315290371856950
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -309,7 +308,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -609,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 844163638606535184, guid: 55d64f558b8610148a69c5038c606c07, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 844163638606535184, guid: 55d64f558b8610148a69c5038c606c07, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -642,6 +641,14 @@ PrefabInstance:
     - target: {fileID: 2966343749828875650, guid: 55d64f558b8610148a69c5038c606c07, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2966343749828875650, guid: 55d64f558b8610148a69c5038c606c07, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2966343749828875650, guid: 55d64f558b8610148a69c5038c606c07, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 2966343749828875650, guid: 55d64f558b8610148a69c5038c606c07, type: 3}
       propertyPath: m_AnchoredPosition.x

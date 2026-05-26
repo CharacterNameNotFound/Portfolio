@@ -1,4 +1,6 @@
 
+using Game.GameMode.Session.Controller;
+using Game.Utilities.MusicControlling;
 using GameWideSystems.GameSceneManagement;
 using GameWideSystems.GameStateManagement;
 using GameWideSystems.InputManager;
@@ -11,16 +13,22 @@ namespace Game.GameMode.MainHub.UI.Screen
         public InputControlFacade InputControlFacade { get; }
         public GameStateManager GameStateManager { get;}
         public ILoadingScreenManager LoadingScreenManager { get; }
+        public AudioArchive AudioArchive { get; }
+        public SessionGameMode.Factory SessionGameModeFactory { get; }
 
 
         public MainHubScreenDependencies(
             InputControlFacade inputControlFacade, 
             GameStateManager gameStateManager, 
-            ILoadingScreenManager loadingScreenManager)
+            ILoadingScreenManager loadingScreenManager,
+            AudioArchive audioArchive, 
+            SessionGameMode.Factory sessionGameModeFactory)
         {
             InputControlFacade = inputControlFacade;
             GameStateManager = gameStateManager;
             LoadingScreenManager = loadingScreenManager;
+            AudioArchive = audioArchive;
+            SessionGameModeFactory = sessionGameModeFactory;
         }
     }
 }

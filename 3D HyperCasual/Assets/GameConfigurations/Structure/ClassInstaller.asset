@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Structure.UniversalScriptableObjectClassInstaller
   _dataObject:
   - {fileID: 11400000, guid: bd11a33add10ad449b9177ba4497714f, type: 2}
+  - {fileID: 11400000, guid: e996653b5042ec540ace499408d64bd2, type: 2}
+  - {fileID: 11400000, guid: 84fe2296ea7d4ba438f9bab2bfc0f3b9, type: 2}
+  - {fileID: 11400000, guid: f282c975163631241ab09016aafea731, type: 2}
+  - {fileID: 11400000, guid: 8f2173f7216fee147bc0af102fdb2c43, type: 2}
+  - {fileID: 11400000, guid: 8d1182fba7e4be54fa3d9f03b5a1f661, type: 2}

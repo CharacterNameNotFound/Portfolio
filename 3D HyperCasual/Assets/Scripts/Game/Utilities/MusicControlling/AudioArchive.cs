@@ -20,7 +20,8 @@ namespace Game.Utilities.MusicControlling
 
         private AudioClip _currentClip;
         private CancellationTokenSource _transitionCancellation;
-        
+
+        private AudioClip _bitSFX;
         
         public AudioArchive(AudioManager audioManager, MusicArchiveAudioProvider soundProvider)
         {
@@ -35,6 +36,8 @@ namespace Game.Utilities.MusicControlling
             {
                 _buttonClips.Add(await reference.Load<AudioClip>(cancellationToken));
             }
+
+            _bitSFX = await _soundProvider.BitSFX.Load<AudioClip>(cancellationToken);
         }
 
         public async UniTask PlayMusic(MusicGroup musicGroup, CancellationToken cancellationToken)
@@ -76,8 +79,13 @@ namespace Game.Utilities.MusicControlling
 
         public void PlayButton()
         {
-            _audioManager.PlaySFX(_buttonClips[_buttonCounter % 2], Application.exitCancellationToken);
+            _audioManager.PlaySFX(_buttonClips[_buttonCounter % 2], Application.exitCancellationToken).Forget();
             _buttonCounter++;
+        }
+
+        public void PlayBit()
+        {
+            _audioManager.PlaySFX(_bitSFX, Application.exitCancellationToken).Forget();
         }
         
     }

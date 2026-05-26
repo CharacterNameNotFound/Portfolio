@@ -25,6 +25,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ec43c08da7a75043a1009c96aa226a0
+    m_Address: Assets/Content/GameMode/Session/Prefabs/PoppedParticles.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3f5b5dff67a942289a9defa416b206f3
     m_Address: TMP Settings
     m_ReadOnly: 0
@@ -52,6 +57,26 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c8f62739272b62643affce61586502fe
     m_Address: Assets/SFX/ButtonClick2.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0089d7e141aa32479e1092f2d6c183e
+    m_Address: Assets/SFX/Drum.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6052bf0171e0e4409881e7388e89adc
+    m_Address: Assets/Content/GameMode/Session/Prefabs/Game.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f59b3c705f9ee8647bb10de0a747b578
+    m_Address: Assets/Content/GameMode/Session/Prefabs/GameCube.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f958fb8b60d8fb145b3ec78b2f1bc8ed
+    m_Address: Assets/Content/GameMode/Session/UI/SessionScreen.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

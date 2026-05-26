@@ -33,11 +33,11 @@ namespace Game.GameMode.Initializer
             _cameraManager = cameraManager;
         }
 
-        public async UniTask<bool> Initialize(GameStateInitializationParameters parameters, CancellationToken cancellationToken)
+        public UniTask<bool> Initialize(GameStateInitializationParameters parameters, CancellationToken cancellationToken)
         {
             _cameraManager.Initialize();
             
-            return true;
+            return UniTask.FromResult(true);
         }
 
         public UniTask Start(GameStateStartParameters parameters, CancellationToken cancellationToken = default)

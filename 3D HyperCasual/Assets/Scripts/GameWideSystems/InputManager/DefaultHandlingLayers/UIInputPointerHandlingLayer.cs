@@ -10,7 +10,7 @@ namespace GameWideSystems.InputManager.DefaultHandlingLayers
         
         public bool TryHandle(IGesture gesture)
         {
-            if (gesture is not Press or Tap)
+            if (gesture is not Press and not Tap and not Pressed)
             {
                 return false;
             }

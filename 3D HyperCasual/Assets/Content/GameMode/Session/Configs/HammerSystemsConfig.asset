@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4742e3e9f2b4ac38dc886cd331483c1, type: 3}
+  m_Name: HammerSystemsConfig
+  m_EditorClassIdentifier: Game.GameMode.Session::Game.GameMode.Session.Gameplay.GameplayLoop.Systems.Configs.HammerSystemsConfig
+  <HammerSize>k__BackingField: 1.2
+  <HammerRelaxator>k__BackingField: 0.075
+  <ActivationAmplitude>k__BackingField: {x: 0, y: 1, z: 0}
+  <UIButtonRelaxator>k__BackingField: 0.075
+  <UIActivationAmplitude>k__BackingField: {x: 270, y: 270, z: 270}
