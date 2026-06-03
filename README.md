@@ -31,15 +31,16 @@ Generation parameters can be adjusted in-game
 ## \[Wip] 3D hyper-casual?
 
 
+
 Technically, it is not a rhythm game, as no audio-source-driven synchronization is performed, but with the current design, it is possible and will not take much time. The second reason is the random generation of press requirements rather than a prebuilt scenario.
 
-Basic match3 spatial manipulation and math
-Particle systems
-ECS-ish architecture
+
+
+* Basic 3D spatial manipulation and math
+* Particle systems
+* ECS-ish architecture
+
+
 
 Itch.io : https://characternamenotfound.itch.io/3d-hyper-casual
-
-
-
-
 
